@@ -26,26 +26,10 @@ const Menu = () => {
           desc: "Wheat flour, apple cider vinegar, bread",
           price: "15$",
         },
-      ],
-    },
-    {
-      name: "Main Dish",
-      id: 2,
-      dishes: [
         {
-          name: "Grilled Salmon with Dill Sauce",
-          desc: "Brown sugar, salmon fillet, Dijon mustard",
-          price: "40$",
-        },
-        {
-          name: "Roast Beef with Vegetable",
-          desc: "Green beans, rib eye, olive oil, beef",
-          price: "35$",
-        },
-        {
-          name: "Marrkesh Vegetetarian Curruy",
-          desc: 'Sweet potato, eggplant, garbanzo bean',
-          price: '45$'
+          name: "Tomato Bruschetta",
+          desc: "Bread, olive oil, garlic, black pepper",
+          price: "30$",
         },
       ],
     },
@@ -65,34 +49,39 @@ const Menu = () => {
         },
         {
           name: "Marrkesh Vegetetarian Curruy",
-          desc: 'Sweet potato, eggplant, garbanzo bean',
-          price: '45$'
+          desc: "Sweet potato, eggplant, garbanzo bean",
+          price: "45$",
+        },
+        {
+          name: "Spicy Vegan Potato Curry",
+          desc: "Coconut milk, beans, potatoes, curry powder",
+          price: "35$",
+        },
+      ],
+    },
+    {
+      name: "Dessert",
+      id: 2,
+      dishes: [
+        {
+          name: "Apple Pie with Cream",
+          desc: "Whipping cream, egg white, cinnamon",
+          price: "15$",
+        },
+        {
+          name: "Lemon Meringue Pie",
+          desc: "Frozen pie crust, meringue, lemon",
+          price: "35$",
+        },
+        {
+          name: "Marrkesh Vegetetarian Curruy",
+          desc: "Sweet potato, eggplant, garbanzo bean",
+          price: "45$",
         },
       ],
     },
   ];
 
-//   const scrollRef = useRef(null);
-
-//   useEffect(() => {
-//   const observer = new IntersectionObserver(
-//     ([entry]) => {
-//       if (entry.isIntersecting) {
-//         // Make the element scrollable when it enters the view
-//         scrollRef.current.style.overflowY = 'scroll';
-//       } else {
-//         // Remove the scrollable behavior when it exits the view
-//         scrollRef.current.style.overflowY = 'hidden';
-//       }
-//     },
-//     { threshold: 0.5 })
-//    if (scrollRef.current) {
-//      observer.observe(scrollRef.current);
-//    }
-//    return () => {
-//      observer.unobserve(scrollRef.current);
-//    };
-//  }, []);
 
   return (
     <div className={styles.menuPage}>
