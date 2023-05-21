@@ -25,6 +25,7 @@ const Header = () => {
     {name: 'Gallery Single', id: 6, path: '/gallery-single'},
     {name: 'FAQ', id: 7, path: '/faq'}
   ]
+  
   return (
     <motion.div 
     className={styles.head}
