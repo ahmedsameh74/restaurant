@@ -2,13 +2,18 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  height: 970px;
+  /* height: 970px; */
   width: 100%;
   padding: 70px 20px;
 }
 
 .sideNav {
   /* width: 400px; */
+  position: sticky;
+  left: 0%;
+  top: 4%;
+  right: 0%;
+  bottom: auto;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -18,15 +23,15 @@
 }
 
 .title {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .title h4 {
-    font-size: 18px;
-    margin: 0;
+  font-size: 18px;
+  margin: 0;
 }
 
 .title h4::after {
@@ -88,11 +93,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   margin-top: 50px;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: 106%;
+  /* height: 106%; */
   flex: 2;
 }
 
@@ -101,13 +106,13 @@
 }
 
 .cat {
-    margin-bottom: 40px;
-    width: 100%;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 .cat h4 {
-    font-size: 25px;
-    margin: 0 0 15px 0;
+  font-size: 25px;
+  margin: 0 0 15px 0;
 }
 
 .dish {
@@ -125,9 +130,9 @@
 }
 
 .menuItemDetails {
-    display: flex;
-    flex: 1;
-    align-items: end;
+  display: flex;
+  flex: 1;
+  align-items: end;
 }
 
 .details {
@@ -138,14 +143,14 @@
 }
 
 .dots {
-        height: 1px;
-    border-bottom: 1px dashed var(--gray);
-    flex: 1;
-    margin: 0 2px 4px 2px;
+  height: 1px;
+  border-bottom: 1px dashed var(--gray);
+  flex: 1;
+  margin: 0 2px 4px 2px;
 }
 
 .price {
-font-size: 20px;
+  font-size: 20px;
 }
 
 .details h3,
