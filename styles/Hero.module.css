@@ -1,0 +1,70 @@
+.hero {
+    padding: 1rem 2.5rem 0 2.5rem;
+    background: var(--blue-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right, .left {
+    flex: 1;
+}
+
+.left {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left h2 {
+    font-size: 80px;
+    font-family: var(--font-family);
+    color: white;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: left;
+    margin: 0;
+}
+
+.left p {
+    font-size: 20px;
+    font-family: var(--font-family);
+    color: white;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0.01em;
+}
+
+.right {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.setting {
+    position: absolute;
+    top: -50px;
+    right: 37px;
+}
+
+.imgWrapper {
+    border-top-left-radius: 628px;
+    border-top-right-radius: 628px;
+    border-width: 30px;
+    border-color: var(--gray);
+    border-style: solid solid none;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.imgWrapper img {
+    border-top-left-radius: 628px;
+    border-top-right-radius: 628px;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    height: 600px;
+}

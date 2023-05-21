@@ -1,0 +1,27 @@
+.sideNav {
+     width: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sideNav .header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sideNav .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideNav img {
+    width: 350px;
+    height: 800px;
+}
