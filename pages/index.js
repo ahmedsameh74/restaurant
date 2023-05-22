@@ -8,6 +8,7 @@ import About from '../components/About/About'
 import Menu from '../components/Menu/Menu'
 import Testomintals from '../components/Testomintals/Testomintals'
 import DivWithBack from '../components/DivWithBack/DivWithBack'
+import Offers from '../components/Offers/Offers'
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Menu/>
       <Testomintals/>
       <DivWithBack/>
+      <Offers/>
     </div>
   )
 }
