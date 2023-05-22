@@ -4,3 +4,4 @@
 * next 
 * css 
 * framer-motion
+* swiperJs
