@@ -7,67 +7,14 @@
   gap: 50px;
 }
 
-.title {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.title h4 {
-  font-size: 18px;
-  margin: 0;
-  color: var(--gray);
-}
-
-.title h4::after {
-  content: "";
-  margin-top: 10px;
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--gold);
-}
-
-.title h4::before {
-  content: "";
-  margin-bottom: 10px;
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--gold);
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.header h3 {
-  font-size: 40px;
-  margin: 15px 0;
-  color: var(--gray);
-}
-
-.header p {
-  font-size: 19px;
-  margin: 0;
-  color: var(--gray);
-  width: 80%;
-  text-align: center;
-  line-height: 2;
-}
-
 .bottom {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
 }
 
-
-.offer, .offerp {
+.offer,
+.offerp {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,14 +23,12 @@
 }
 
 .offer {
-  background: url('../assets/blueback.jpg') no-repeat center center;
+  background: url("../assets/blueback.jpg") no-repeat center center;
 }
 
 .offerp {
-  background: url('../assets/whiteback.jpg') no-repeat center center;
+  background: url("../assets/whiteback.jpg") no-repeat center center;
 }
-
-
 
 .offerDetails {
   width: 50%;
@@ -102,7 +47,8 @@
   object-fit: cover;
 }
 
-.offerPrice, .offerPricep {
+.offerPrice,
+.offerPricep {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,28 +60,34 @@
 }
 
 .offerPrice {
-  background: url('../assets/vectors/offer.svg') no-repeat center center;
+  background: url("../assets/vectors/offer.svg") no-repeat center center;
 }
 
 .offerp .offerPrice {
-  background: url('../assets/vectors/offerdark.svg') no-repeat center center;
+  background: url("../assets/vectors/offerdark.svg") no-repeat center center;
 }
 
-.offerPrice p, .offerPrice h3, .offerp .offerPrice p, .offerp .offerPrice h3 {
+.offerPrice p,
+.offerPrice h3,
+.offerp .offerPrice p,
+.offerp .offerPrice h3 {
   margin: 0;
 }
 
-.offerPrice p, .offerp .offerPrice p {
+.offerPrice p,
+.offerp .offerPrice p {
   font-size: 25px;
   margin-bottom: 10px;
 }
 
-.offerPrice h3, .offerp .offerPrice h3 {
+.offerPrice h3,
+.offerp .offerPrice h3 {
   font-size: 35px;
   margin-top: 5px;
 }
 
-.offerp .offerPrice h3, .offerp .offerPrice p {
+.offerp .offerPrice h3,
+.offerp .offerPrice p {
   color: var(--light);
 }
 
@@ -145,7 +97,6 @@
   justify-content: center;
   flex-direction: column;
 }
-
 
 .offerDesc p:nth-child(1) {
   font-size: 20px;
@@ -170,8 +121,6 @@
   height: 2px;
   background: var(--gold);
 }
-
-
 
 .offerDesc h2 {
   font-size: 30px;

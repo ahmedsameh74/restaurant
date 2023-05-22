@@ -2,23 +2,19 @@ import styles from '../../styles/Offers.module.css'
 import burger from '../../assets/hampurger.png'
 import pizza from '../../assets/pizza.png'
 import Image from 'next/image'
+import SubHead from '../SubHead/SubHead'
 
 const Offers = () => {
   return (
     <div className={styles.offers}>
-      <div className={styles.top}>
-        <div className={styles.title}>
-          <h4>Offers</h4>
-        </div>
-        <div className={styles.header}>
-          <h3>Our Offer Dishes</h3>
-          <p>
-            Our chefs create melt-in-your-mouth dishes that{"'"}ll satiate even
-            the fussiest eaters now the dishes are in offers use it based on
-            hunger.
-          </p>
-        </div>
-      </div>
+      <SubHead 
+      title={"Offers"} 
+      subTitle={"Our Offer Dishes"} 
+      desc={"Our chefs create melt-in-your-mouth dishes that'll satiate even the fussiest eaters now the dishes are in offers use it based on hunger."} 
+      color={'#555'} 
+      align={'center'} 
+        width={'80%'}
+      />
       <div className={styles.bottom}>
         <div className={styles.offer}>
           <div className={styles.offerDetails}>

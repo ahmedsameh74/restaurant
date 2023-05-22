@@ -5,39 +5,34 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Navigation,
   Pagination,
-  EffectFade,
 } from "swiper";
 
 
 import "swiper/css";
 import "swiper/swiper-bundle.css";
+import SubHead from '../SubHead/SubHead';
 
-SwiperCore.use([Navigation, Pagination, EffectFade]);
+SwiperCore.use([Navigation, Pagination]);
 
 const Testomintals = () => {
   return (
     <div className={styles.testo}>
-      <div className={styles.top}>
-        <div className={styles.title}>
-          <h4>TESTIMONIAL</h4>
-        </div>
-        <div className={styles.header}>
-          <h3>Our Clients Say</h3>
-          <p>
-            We love to hear from customers, so please leave a comment or say
-            hello in an email.
-          </p>
-        </div>
-      </div>
+      <SubHead
+        title="TESTIMONIAL"
+        subTitle="What Our Clients Say"
+        desc="We love to hear from customers, so please leave a comment or say hello in an email."
+        color="#fff"
+        align="start"
+        width="100%"
+      />
       <div className={styles.bottom}>
         <Swiper
           spaceBetween={50}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-          modules={[Pagination, EffectFade]}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          modules={[Pagination]}
           pagination={{ clickable: true }}
           className={styles.swiper}
-          effect=''
           slidesPerView={3}
         >
           <SwiperSlide>
@@ -51,9 +46,13 @@ const Testomintals = () => {
                   </div>
                 </div>
               </div>
-                <div className={styles.slideBody}>
-                    <p>They known for its fabulous taste and food. Anywhere you go your hunger is satisfied. The best chicken & burgers those are yummy. </p>
-                </div>
+              <div className={styles.slideBody}>
+                <p>
+                  They known for its fabulous taste and food. Anywhere you go
+                  your hunger is satisfied. The best chicken & burgers those are
+                  yummy.{" "}
+                </p>
+              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -67,9 +66,13 @@ const Testomintals = () => {
                   </div>
                 </div>
               </div>
-                <div className={styles.slideBody}>
-                    <p>They known for its fabulous taste and food. Anywhere you go your hunger is satisfied. The best chicken & burgers those are yummy. </p>
-                </div>
+              <div className={styles.slideBody}>
+                <p>
+                  They known for its fabulous taste and food. Anywhere you go
+                  your hunger is satisfied. The best chicken & burgers those are
+                  yummy.{" "}
+                </p>
+              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -83,9 +86,13 @@ const Testomintals = () => {
                   </div>
                 </div>
               </div>
-                <div className={styles.slideBody}>
-                    <p>They known for its fabulous taste and food. Anywhere you go your hunger is satisfied. The best chicken & burgers those are yummy. </p>
-                </div>
+              <div className={styles.slideBody}>
+                <p>
+                  They known for its fabulous taste and food. Anywhere you go
+                  your hunger is satisfied. The best chicken & burgers those are
+                  yummy.{" "}
+                </p>
+              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -99,10 +106,18 @@ const Testomintals = () => {
                   </div>
                 </div>
               </div>
-                <div className={styles.slideBody}>
-                    <p>They known for its fabulous taste and food. Anywhere you go your hunger is satisfied. The best chicken & burgers those are yummy. </p>
-                    <p>They known for its fabulous taste and food. Anywhere you go your hunger is satisfied. The best chicken & burgers those are yummy. </p>
-                </div>
+              <div className={styles.slideBody}>
+                <p>
+                  They known for its fabulous taste and food. Anywhere you go
+                  your hunger is satisfied. The best chicken & burgers those are
+                  yummy.{" "}
+                </p>
+                <p>
+                  They known for its fabulous taste and food. Anywhere you go
+                  your hunger is satisfied. The best chicken & burgers those are
+                  yummy.{" "}
+                </p>
+              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -116,12 +131,15 @@ const Testomintals = () => {
                   </div>
                 </div>
               </div>
-                <div className={styles.slideBody}>
-                    <p>They known for its fabulous taste and food. Anywhere you go your hunger is satisfied. The best chicken & burgers those are yummy. </p>
-                </div>
+              <div className={styles.slideBody}>
+                <p>
+                  They known for its fabulous taste and food. Anywhere you go
+                  your hunger is satisfied. The best chicken & burgers those are
+                  yummy.{" "}
+                </p>
+              </div>
             </div>
           </SwiperSlide>
-          
         </Swiper>
       </div>
     </div>
