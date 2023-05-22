@@ -6,6 +6,8 @@ import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
 import About from '../components/About/About'
 import Menu from '../components/Menu/Menu'
+import Testomintals from '../components/Testomintals/Testomintals'
+import DivWithBack from '../components/DivWithBack/DivWithBack'
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <Hero/>
       <About/>
       <Menu/>
+      <Testomintals/>
+      <DivWithBack/>
     </div>
   )
 }

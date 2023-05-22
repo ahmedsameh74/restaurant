@@ -3,7 +3,7 @@ import foods from "../../assets/foods.jpg";
 
 import Image from "next/image";
 import MenuItem from "../MenuItem/MenuItem";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const Menu = () => {
   const menu = [
@@ -85,7 +85,12 @@ const Menu = () => {
 
   return (
     <div className={styles.menuPage}>
-      <div className={styles.sideNav}>
+      <motion.div
+        initial={{ x: -100 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 0.5 }}
+        className={styles.sideNav}
+      >
         <div className={styles.title}>
           <h4>MENU</h4>
         </div>
@@ -100,8 +105,13 @@ const Menu = () => {
         <div className={styles.photo}>
           <Image src={foods} alt="foods" />
         </div>
-        <button className="secondary-btn" style={{width: '50%', fontSize: '19px'}}>See All Dishes</button>
-      </div>
+        <button
+          className="secondary-btn"
+          style={{ width: "50%", fontSize: "19px" }}
+        >
+          See All Dishes
+        </button>
+      </motion.div>
       <div className={styles.menu}>
         {/* <MenuItem /> */}
         {menu.map((item) => {

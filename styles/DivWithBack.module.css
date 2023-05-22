@@ -1,0 +1,6 @@
+.DivWithBack {
+    background: url('../assets/background.jpg') no-repeat fixed;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
