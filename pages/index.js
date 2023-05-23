@@ -10,6 +10,7 @@ import Testomintals from '../components/Testomintals/Testomintals'
 import DivWithBack from '../components/DivWithBack/DivWithBack'
 import Offers from '../components/Offers/Offers'
 import Popular from '../components/Popular/Popular'
+import Offer from '../components/Offer/Offer'
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <DivWithBack/>
       <Offers/>
       <Popular/>
+      <Offer/>
     </div>
   )
 }
