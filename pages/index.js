@@ -9,6 +9,7 @@ import Menu from '../components/Menu/Menu'
 import Testomintals from '../components/Testomintals/Testomintals'
 import DivWithBack from '../components/DivWithBack/DivWithBack'
 import Offers from '../components/Offers/Offers'
+import Popular from '../components/Popular/Popular'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Testomintals/>
       <DivWithBack/>
       <Offers/>
+      <Popular/>
     </div>
   )
 }

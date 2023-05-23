@@ -3,10 +3,11 @@ import burger from '../../assets/hampurger.png'
 import pizza from '../../assets/pizza.png'
 import Image from 'next/image'
 import SubHead from '../SubHead/SubHead'
+import Layout from '../Layout/Layout'
 
 const Offers = () => {
   return (
-    <div className={styles.offers}>
+    <Layout>
       <SubHead 
       title={"Offers"} 
       subTitle={"Our Offer Dishes"} 
@@ -49,7 +50,7 @@ const Offers = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 

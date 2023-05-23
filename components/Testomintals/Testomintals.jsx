@@ -15,6 +15,7 @@ import SubHead from '../SubHead/SubHead';
 SwiperCore.use([Navigation, Pagination]);
 
 const Testomintals = () => {
+  
   return (
     <div className={styles.testo}>
       <SubHead

@@ -65,7 +65,7 @@
     display: none;
     opacity: 0;
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: -20px;
     background: var(--blue);
     width: 200px;
