@@ -68,3 +68,22 @@
     display: inline-block;
     height: 600px;
 }
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 2.5rem;
+        gap: 20px;
+    }
+
+    .left {
+        align-items: center;
+    }
+    .left h2 {
+        font-size: 50px;
+        text-align: center;
+    }
+    .left p {
+        text-align: center;
+    }
+}

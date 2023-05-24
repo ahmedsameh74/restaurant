@@ -44,3 +44,14 @@
     margin: 5px 0;
     line-height: 1.5;
 }
+
+@media screen and (max-width: 768px) {
+    .offerWrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .offerContainer {
+        grid-template-columns: 1fr;
+    }
+}

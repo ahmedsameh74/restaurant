@@ -94,3 +94,16 @@
 .details p {
   margin: 15px 0 0 0;
 }
+
+@media screen and (max-width: 768px) {
+  .menuPage {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px;
+  }
+
+  .sideNav {
+    position: static;
+  }
+}

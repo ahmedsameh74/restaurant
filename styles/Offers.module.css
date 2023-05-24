@@ -125,3 +125,10 @@
   color: var(--gray);
   letter-spacing: 1px;
 }
+
+
+@media screen and (max-width: 768px) {
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+}

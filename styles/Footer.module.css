@@ -113,6 +113,15 @@
     color: var(--light);
 }
 
+.input input::placeholder {
+    color: var(--light);
+}
+
+.input input:focus-visible {
+    outline: none;
+    border: 1px solid var(--light);
+}
+
 .input button {
     width: 30%;
     height: 60px;
@@ -127,4 +136,35 @@
 
 .input button:hover {
     background: var(--gold);
+}
+
+@media screen and (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .center {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footCont {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footCont:last-child {
+        align-items: center;
+    }
+
+    .footCont:nth-child(2) {
+        align-items: center;
+    }
+
+    .details {
+        align-items: center;
+        gap: 20px;
+    }
 }

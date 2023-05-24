@@ -117,3 +117,9 @@
     color: var(--gold);
     border: 1px solid var(--gold);
 }
+
+@media screen and (max-width: 768px) {
+    .bottom {
+        grid-template-columns: 1fr;
+    }
+}

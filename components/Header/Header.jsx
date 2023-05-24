@@ -2,6 +2,7 @@ import styles from '../../styles/Header.module.css'
 import Logo from '../../assets/logo.svg'
 import ArrowDown from '../../assets/icons/down-arrow.svg'
 import {BsFacebook, BsTwitter, BsInstagram, BsPinterest} from 'react-icons/bs';
+import {ImMenu} from 'react-icons/im';
 
 import Image from 'next/image';
 import { motion } from "framer-motion";
@@ -77,8 +78,10 @@ const Header = () => {
                 )
               }
             })}
-
           </div>
+            <div className={styles.burger}>
+              <ImMenu/>
+            </div>
           <div className={styles.icons}>
           <a><BsInstagram/></a>
           <a><BsFacebook/></a>
