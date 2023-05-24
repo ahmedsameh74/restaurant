@@ -1,0 +1,101 @@
+.reservation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4.5rem 2.5rem;
+    background: url('../assets/restback.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.reservationForm {
+    backdrop-filter: blur(5px);
+    background: #292e36f2;
+    padding: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.formHead {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formHead h3 {
+    color: var(--light);
+    font-size: 16px;
+    margin: 0;
+}
+.formHead h3::after, .formHead h3::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    margin: 10px 0;
+    background: var(--gold);
+}
+
+.formHead p {
+    color: var(--light);
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.inputGroub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.formGroub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.formGroub input {
+    flex: 1;
+    /* height: 60px; */
+    background: unset;
+    border: 1px solid var(--light);
+    padding: 25px 10px;
+    color: var(--light);
+    font-size: 19px;
+}
+
+.formGroub input::placeholder {
+    color: var(--light);
+    font-size: 19px;
+}
+
+.formGroub input:focus-visible {
+    outline: none;
+}
+
+.formBtn button {
+    background: var(--light);
+    color: #343942b0;
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.formBtn button:hover {
+    background-color: var(--gold);
+    color: var(--light);
+    
+}

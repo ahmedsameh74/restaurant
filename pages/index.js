@@ -11,6 +11,8 @@ import DivWithBack from '../components/DivWithBack/DivWithBack'
 import Offers from '../components/Offers/Offers'
 import Popular from '../components/Popular/Popular'
 import Offer from '../components/Offer/Offer'
+import BlogSection from '../components/BlogSection/BlogSection'
+import Reservation from '../components/Reservation/Reservation'
 
 export default function Home() {
   return (
@@ -30,6 +32,8 @@ export default function Home() {
       <Offers/>
       <Popular/>
       <Offer/>
+      <BlogSection/>
+      <Reservation/>
     </div>
   )
 }
