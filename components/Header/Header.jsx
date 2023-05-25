@@ -3,9 +3,25 @@ import Logo from '../../assets/logo.svg'
 import ArrowDown from '../../assets/icons/down-arrow.svg'
 import {BsFacebook, BsTwitter, BsInstagram, BsPinterest} from 'react-icons/bs';
 import {ImMenu} from 'react-icons/im';
+import {GrClose} from 'react-icons/gr';
 
 import Image from 'next/image';
 import { motion } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from 'react';
+
+const variants = {
+  open: { opacity: 1,
+    //  y: 0,
+    //   scaleY: 1,
+       height: 'auto',
+      },
+  closed: { 
+    opacity: 0,
+    //  scaleY: 0,
+    //  y: 0,
+      height: 0,
+    },
+}
 
 const Header = () => {
   const navItems = [
@@ -26,71 +42,140 @@ const Header = () => {
     {name: 'Gallery Single', id: 6, path: '/gallery-single'},
     {name: 'FAQ', id: 7, path: '/faq'}
   ]
+
+  const [active, setActive] = useState(false)
+  const ref = useRef(null);
+
+  const closeOpenMenus = useCallback(
+    (e) => {
+      if (ref.current && active && !ref.current.contains(e.target)) {
+        setActive(false);
+      }
+    },
+    [active]
+  );
+
+  useEffect(() => {
+    document.addEventListener("mousedown", closeOpenMenus);
+    return () => {
+      document.removeEventListener("mousedown", closeOpenMenus);
+    };
+  }, [active]);
+
   
   return (
-    <motion.div 
-    className={styles.head}
-    initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.5 }}
+    <motion.div
+      className={styles.head}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
     >
-        <div className={styles.top}>
-        <button className='secondary-btn'>Call - 123 456 789</button>
-            <Image src={Logo} alt="logo"/>
+      <div className={styles.top}>
+        <button className="secondary-btn">Call - 123 456 789</button>
+        <Image src={Logo} alt="logo" />
 
-          <button className="main-btn">Reservation</button>
-        </div>
-        <div className={styles.center}>
-          <div className={styles.navItems}>
-            {navItems.map(item => {
-              if(item.name === 'Pages') {
-                return (
-                  <div
-                    key={item.id}
-                    className={styles.navItem}
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <p>
-                      {item.name}
-                      <Image
-                        src={ArrowDown}
-                        alt="arrow"
-                        width={20}
-                        height={20}
-                      />
-                    </p>
-                    <div>
-                      {nestedNavItems.map((item) => {
-                        return (
-                          <a key={item.id} href={item.path}>
-                            {item.name}
-                          </a>
-                        );
-                      })}
-                    </div>
+        <button className="main-btn">Reservation</button>
+      </div>
+      <div className={styles.center}>
+        <div className={styles.navItems}>
+          {navItems.map((item) => {
+            if (item.name === "Pages") {
+              return (
+                <div
+                  key={item.id}
+                  className={styles.navItem}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <p>
+                    {item.name}
+                    <Image src={ArrowDown} alt="arrow" width={20} height={20} />
+                  </p>
+                  <div>
+                    {nestedNavItems.map((item) => {
+                      return (
+                        <a key={item.id} href={item.path}>
+                          {item.name}
+                        </a>
+                      );
+                    })}
                   </div>
-                );
-              }else {
-                return(
-                  <a key={item.id} href={item.path}>{item.name}</a>
-                )
-              }
-            })}
-          </div>
-            <div className={styles.burger}>
-              <ImMenu/>
-            </div>
-          <div className={styles.icons}>
-          <a><BsInstagram/></a>
-          <a><BsFacebook/></a>
-          <a><BsTwitter/></a>
-          <a><BsPinterest/></a>
-          </div>
+                </div>
+              );
+            } else {
+              return (
+                <a key={item.id} href={item.path}>
+                  {item.name}
+                </a>
+              );
+            }
+          })}
         </div>
+        {!active ? (
+          <div className={styles.burger} onClick={() => setActive(true)}>
+            <ImMenu />
+          </div>
+        ) : (
+          <div className={styles.burger} onClick={() => setActive(false)}>
+            <GrClose />
+          </div>
+        )}
+        <div className={styles.icons}>
+          <a>
+            <BsInstagram />
+          </a>
+          <a>
+            <BsFacebook />
+          </a>
+          <a>
+            <BsTwitter />
+          </a>
+          <a>
+            <BsPinterest />
+          </a>
+        </div>
+      </div>
+
+      <motion.div
+        className={styles.mobMenu}
+        animate={active ? "open" : "closed"}
+        variants={variants}
+        initial="collapsed"
+        exit="collapsed"
+        ref={ref}
+        // style={{ display: active ? "flex" : "none" }}
+      >
+        {navItems.map((item) => {
+          if (item.name === "Pages") {
+            return (
+              <div key={item.id} className={styles.mobNavItem}>
+                <p>
+                  {item.name}
+                  <Image src={ArrowDown} alt="arrow" width={20} height={20} />
+                </p>
+                <div>
+                  {nestedNavItems.map((item) => {
+                    return (
+                      <a key={item.id} href={item.path}>
+                        {item.name}
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          } else {
+            return (
+              <a key={item.id} href={item.path}>
+                {item.name}
+              </a>
+            );
+          }
+        })}
+      </motion.div>
     </motion.div>
-  )
+  );
 }
 
 export default Header
