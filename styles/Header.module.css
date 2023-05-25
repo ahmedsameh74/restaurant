@@ -102,6 +102,9 @@
         flex-direction: column;
         gap: 20px;
     }
+    .top img {
+        width: 100%;
+    }
 
     .top button {
         width: 50%;

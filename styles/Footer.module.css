@@ -144,6 +144,11 @@
         gap: 40px;
     }
 
+    .top img {
+        width: 100%;
+
+    }
+
     .center {
         flex-direction: column;
         gap: 40px;

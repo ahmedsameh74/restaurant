@@ -16,10 +16,12 @@
 
 .offer {
   background: url("../assets/blueback.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .offerp {
   background: url("../assets/whiteback.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .offerDetails {
@@ -131,5 +133,18 @@
 @media screen and (max-width: 768px) {
   .bottom {
     grid-template-columns: 1fr;
+  }
+
+  .offer, .offerp {
+    flex-direction: column-reverse;
+  }
+
+  .offerDetails, .offerImg {
+    width: 100%;
+  }
+
+  .offerImg img{
+    height: 100%;
+    width: 100%;
   }
 }
