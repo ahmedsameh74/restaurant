@@ -104,13 +104,14 @@
 }
 
 .navItems .navItem:hover > div {
-    visibility: visible;
+    /* visibility: visible; */
     opacity: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     gap: 15px;
+    z-index: 222222222;
 }
 
 .navItem p{
