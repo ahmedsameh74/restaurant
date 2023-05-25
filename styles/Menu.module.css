@@ -105,5 +105,34 @@
 
   .sideNav {
     position: static;
+    padding: 0;
+    align-items: center;
   }
+
+  .sideNav img {
+    width: 100%;
+  }
+
+  .sideNav button {
+    width: 70% !important;
+  }
+
+  .dish img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .menuItemDetails {
+    align-items: center;
+  }
+
+  .details h3 {
+    font-size: 15px;
+  }
+
+  .details p {
+    font-size: 14px;
+  }
+
+  
 }

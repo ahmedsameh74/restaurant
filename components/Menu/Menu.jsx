@@ -92,23 +92,25 @@ const Menu = () => {
         transition={{ duration: 0.5 }}
         className={styles.sideNav}
       >
-        <SubHead
-          title="MENU"
-          subTitle="Try Our Special Dishes"
-          desc="Every time you perfectly dine with us, it should happy for great inspired food in an environment designed with individual touches unique to the local area."
-          color="#000"
-          align="start"
-          width="100%"
-        />
-        <div className={styles.photo}>
-          <Image src={foods} alt="foods" />
-        </div>
-        <button
-          className="secondary-btn"
-          style={{ width: "50%", fontSize: "19px" }}
-        >
-          See All Dishes
-        </button>
+        {/* <div className={styles.sideNav}> */}
+          <SubHead
+            title="MENU"
+            subTitle="Try Our Special Dishes"
+            desc="Every time you perfectly dine with us, it should happy for great inspired food in an environment designed with individual touches unique to the local area."
+            color="#000"
+            align="start"
+            width="100%"
+          />
+          <div className={styles.photo}>
+            <Image src={foods} alt="foods" />
+          </div>
+          <button
+            className="secondary-btn"
+            style={{ width: "50%", fontSize: "19px" }}
+          >
+            See All Dishes
+          </button>
+        {/* </div> */}
       </motion.div>
       <div className={styles.menu}>
         {/* <MenuItem /> */}

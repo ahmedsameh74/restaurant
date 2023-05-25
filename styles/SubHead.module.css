@@ -51,3 +51,24 @@
   color: var(--gray);
   margin: 0 0 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .title {
+    justify-content: center !important;
+  }
+  .top h3 {
+    text-align: center !important;
+    font-size: 35px !important;
+  }
+
+  .header {
+    align-items: center !important;
+  }
+
+  .header p {
+    text-align: center !important;
+    width: 100% !important;
+    font-size: 17px !important;
+  }
+
+}

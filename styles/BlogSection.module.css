@@ -122,4 +122,8 @@
     .bottom {
         grid-template-columns: 1fr;
     }
+
+    .cardTitle {
+        font-size: 13px;
+    }
 }
