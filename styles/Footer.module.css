@@ -172,4 +172,8 @@
         align-items: center;
         gap: 20px;
     }
+
+    .input {
+        flex-direction: column;
+    }
 }
