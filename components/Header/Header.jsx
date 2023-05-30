@@ -55,7 +55,7 @@ const Header = () => {
 
   const closeOpenMenus = useCallback(
     (e) => {
-      if (ref.current && active && !ref.current.contains(e.target)) {
+      if (ref.current && active && !ref.current.contains(e.target) || ref.current.contains(e.target)) {
         setActive(false);
       }
     },
