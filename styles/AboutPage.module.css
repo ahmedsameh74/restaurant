@@ -133,3 +133,23 @@
     font-size: 19px;
     margin-top: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .about {
+        border: none !important;
+        width: 50%;
+    }
+
+    .chefs {
+        flex-direction: column;
+    }
+
+    .chefSocial{
+        transform: translateY(55px);
+    }
+}
