@@ -176,4 +176,9 @@
     .input {
         flex-direction: column;
     }
+
+    .input button {
+        width: 60%;
+        height: 40px;
+    }
 }

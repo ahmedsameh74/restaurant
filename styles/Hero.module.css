@@ -123,8 +123,25 @@
         height: 430px;
     }
 
+    .anotherStyleForImgWrapper img {
+    border-top-left-radius: 628px;
+    border-top-right-radius: 628px;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    height: 430px;
+}
+
     .setting {
-        right: 30px;
+        right: 100px;
+        /* width: 200px;
+        height: 200px; */
+        top: -30px;
+        transform-origin: center;
+    }
+    .setting img {
+        width: 200px;
+        height: 200px;
     }
     .left {
         align-items: center;
@@ -136,4 +153,13 @@
     .left p {
         text-align: center;
     }
+
+    .anotherStyleForImgWrapper {
+    border-top-left-radius: 628px;
+    border-top-right-radius: 628px;
+    border-width: 30px;
+    border-color: var(--gray);
+    border-style: solid solid none;
+    width: 100%;
+}
 }
