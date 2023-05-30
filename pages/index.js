@@ -13,8 +13,11 @@ import Popular from '../components/Popular/Popular'
 import Offer from '../components/Offer/Offer'
 import BlogSection from '../components/BlogSection/BlogSection'
 import Reservation from '../components/Reservation/Reservation'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  
+
   return (
     <div className='home'>
       <Head>

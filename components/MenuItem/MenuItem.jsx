@@ -2,9 +2,9 @@ import Image from "next/image";
 import styles from "../../styles/Menu.module.css";
 import foods from "../../assets/foods.jpg";
 
-const MenuItem = ({name, dishes}) => {
+const MenuItem = ({name, dishes, style}) => {
   return (
-    <div className={styles.cat}>
+    <div className={style ? style : styles.cat}>
       <h4>{name}</h4>
       {dishes.map(dish => {
         return (

@@ -1,13 +1,20 @@
 import styles from '../../styles/Header.module.css'
 import Logo from '../../assets/logo.svg'
 import ArrowDown from '../../assets/icons/down-arrow.svg'
-import {BsFacebook, BsTwitter, BsInstagram, BsPinterest} from 'react-icons/bs';
+// import {BsFacebook, BsTwitter, BsInstagram, BsPinterest} from 'react-icons/bs';
 import {ImMenu} from 'react-icons/im';
 import {GrClose} from 'react-icons/gr';
+import {
+  BsFacebook,
+  BsTwitter,
+  BsInstagram,
+  BsPinterest,
+} from "react-icons/bs";
 
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 const variants = {
   open: { opacity: 1,
@@ -27,7 +34,7 @@ const Header = () => {
   const navItems = [
     {name: 'Home', path: '/', id: 1, isActive: true},
     {name: 'About Us', path: '/about', id: 2, isActive: false},
-    {name: 'Our Menu', path: '/menu', id: 3, isActive: false},
+    {name: 'Our Menu', path: '/our-menu', id: 3, isActive: false},
     {name: 'Pages', path: '/', id: 4, isActive: false},
     {name: 'Blog', path: '/blog', id: 5, isActive: false},
     {name: 'Contact Us', path: '/contact', id: 6, isActive: false}
@@ -84,9 +91,9 @@ const Header = () => {
                 <div
                   key={item.id}
                   className={styles.navItem}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
+                  // initial={{ opacity: 0, scale: 0.5 }}
+                  // animate={{ opacity: 1, scale: 1 }}
+                  // transition={{ duration: 0.5 }}
                 >
                   <p>
                     {item.name}
@@ -95,9 +102,11 @@ const Header = () => {
                   <div>
                     {nestedNavItems.map((item) => {
                       return (
-                        <a key={item.id} href={item.path}>
-                          {item.name}
-                        </a>
+                        <Link key={item.id} href={item.path} legacyBehavior>
+                          {/* <a> */}
+                            {item.name}
+                          {/* </a> */}
+                        </Link>
                       );
                     })}
                   </div>
@@ -105,9 +114,11 @@ const Header = () => {
               );
             } else {
               return (
-                <a key={item.id} href={item.path}>
+                <Link key={item.id} href={item.path} legacyBehavior>
+                  <a>
                   {item.name}
-                </a>
+                  </a>
+                </Link>
               );
             }
           })}
@@ -122,18 +133,18 @@ const Header = () => {
           </div>
         )}
         <div className={styles.icons}>
-          <a>
+          <span>
             <BsInstagram />
-          </a>
-          <a>
+          </span>
+          <span>
             <BsFacebook />
-          </a>
-          <a>
+          </span>
+          <span>
             <BsTwitter />
-          </a>
-          <a>
+          </span>
+          <span>
             <BsPinterest />
-          </a>
+          </span>
         </div>
       </div>
 
@@ -141,7 +152,7 @@ const Header = () => {
         className={styles.mobMenu}
         animate={active ? "open" : "closed"}
         variants={variants}
-        initial="collapsed"
+        initial="closed"
         exit="collapsed"
         ref={ref}
         // style={{ display: active ? "flex" : "none" }}
@@ -157,9 +168,11 @@ const Header = () => {
                 <div>
                   {nestedNavItems.map((item) => {
                     return (
-                      <a key={item.id} href={item.path}>
+                      <Link key={item.id} href={item.path} legacyBehavior>
+                      {/* <a> */}
                         {item.name}
-                      </a>
+                      {/* </a> */}
+                      </Link>
                     );
                   })}
                 </div>
@@ -167,9 +180,11 @@ const Header = () => {
             );
           } else {
             return (
-              <a key={item.id} href={item.path}>
+              <Link key={item.id} href={item.path} legacyBehavior>
+                {/* <a> */}
                 {item.name}
-              </a>
+                {/* </a> */}
+              </Link>
             );
           }
         })}
