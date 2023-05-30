@@ -1,25 +1,50 @@
 import styles from '../../styles/Hero.module.css'
 import photo from '../../assets/pexels-photo-914388.jpg'
 import setting from '../../assets/vectors/setting.svg'
+import settingGold from '../../assets/vectors/settingGold.svg'
 import Image from 'next/image'
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Kevin from "../../assets/Kevin.png";
 
-const Hero = () => {
+
+const Hero = ({ head, title, body, signature, button, animition, background }) => {
   return (
-    <div className={styles.hero}>
+    <div className={styles.hero} style={{ background }}>
       <div className={styles.left}>
-        <h2>Welcome to Restaurant</h2>
-        <p>
-          The people, food and the prime locations make the perfect place good
-          friends & family to come together and have great time.
-        </p>
-        <Link href={'/our-menu'} legacyBehavior>
-          <a className="secondary-btn">View Menu</a>
+        {head && (
+          <h3
+            className={styles.mainTitle}
+            style={{ color: background === "white" && "black" }}
+          >
+            About Us
+          </h3>
+        )}
+        <h2
+          style={{
+            color: background === "white" && "black",
+            fontSize: title && "60px",
+          }}
+        >
+          {title}
+        </h2>
+        <p style={{ color: background === "white" && "black" }}>{body}</p>
+        {signature && (
+          <div className={styles.info}>
+            <h3>Kevin</h3>
+            <Image src={Kevin} alt="signature" />
+          </div>
+        )}
+        <Link href={"/our-menu"} legacyBehavior>
+          <a className="secondary-btn">{button}</a>
         </Link>
       </div>
-      <div className={styles.right}>
-        <div className={styles.imgWrapper}>
+      <div className={styles.right} style={{justifyContent: title && 'center'}}>
+        <div
+          className={
+            title ? styles.anotherStyleForImgWrapper : styles.imgWrapper
+          }
+        >
           <Image src={photo} alt="photo" />
         </div>
         <motion.div
@@ -27,11 +52,14 @@ const Hero = () => {
           transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
           className={styles.setting}
         >
-          <Image src={setting} alt="photo" />
+          <Image
+            src={animition === "default" ? setting : settingGold}
+            alt="photo"
+          />
         </motion.div>
       </div>
     </div>
   );
-}
+};
 
 export default Hero

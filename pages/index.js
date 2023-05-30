@@ -19,7 +19,7 @@ export default function Home() {
   
 
   return (
-    <div className='home'>
+    <div className="home">
       <Head>
         <title>Restaurant</title>
         <meta name="description" content="restaurant ui" />
@@ -27,16 +27,24 @@ export default function Home() {
       </Head>
 
       {/* <Header/> */}
-      <Hero/>
-      <About/>
-      <Menu/>
-      <Testomintals/>
-      <DivWithBack/>
-      <Offers/>
-      <Popular/>
-      <Offer/>
-      <BlogSection/>
-      <Reservation/>
+      <Hero
+        head={false}
+        title="Welcome to Restaurant"
+        body="The people, food and the prime locations make the perfect place good friends & family to come together and have great time."
+        signature={false}
+        button="View menu"
+        animition="default"
+        background="#292e36"
+      />
+      <About />
+      <Menu />
+      <Testomintals />
+      <DivWithBack />
+      <Offers />
+      <Popular />
+      <Offer />
+      <BlogSection />
+      <Reservation />
     </div>
-  )
+  );
 }

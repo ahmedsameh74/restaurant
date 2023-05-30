@@ -1,0 +1,135 @@
+.banner {
+    width: 100%;
+    margin: 125px 0;
+    background: url('../assets/background.jpg');
+    height: 500px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+}
+
+.chiefs {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.chefs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.singleChef {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.singleChef h3, .singleChef p {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.singleChef h3 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.singleChef p {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.singleChef .img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.singleChef img {
+    width: 100%;
+    height: 360px;
+}
+
+.chefSocial {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: black;
+    height: 50px;
+    /* visibility: hidden; */
+    color: white;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(50px);
+}
+
+.singleChef:hover .chefSocial {
+    /* visibility: visible; */
+    /* height: 50px; */
+    transform: translateY(0px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #0000007d;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+    border-right: 3px solid #7a7a7a;
+}
+
+.lastAbout{
+    border-right: none !important;
+}
+
+.about img {
+    fill: var(--gold);
+    width: 80px;
+    height: 80px;
+}
+
+.about p, .about h4 {
+    color: var(--light);
+    margin: 10px 0;
+}
+
+.about h4 {
+    font-size: 25px;
+}
+
+.about p {
+    font-size: 19px;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+}
+
+.about a {
+    color: var(--gold);
+    font-size: 19px;
+    margin-top: 10px;
+}

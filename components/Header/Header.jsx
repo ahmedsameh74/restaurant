@@ -103,9 +103,9 @@ const Header = () => {
                     {nestedNavItems.map((item) => {
                       return (
                         <Link key={item.id} href={item.path} legacyBehavior>
-                          {/* <a> */}
+                          <a>
                             {item.name}
-                          {/* </a> */}
+                          </a>
                         </Link>
                       );
                     })}
@@ -169,9 +169,9 @@ const Header = () => {
                   {nestedNavItems.map((item) => {
                     return (
                       <Link key={item.id} href={item.path} legacyBehavior>
-                      {/* <a> */}
+                      <a>
                         {item.name}
-                      {/* </a> */}
+                      </a>
                       </Link>
                     );
                   })}
@@ -181,9 +181,9 @@ const Header = () => {
           } else {
             return (
               <Link key={item.id} href={item.path} legacyBehavior>
-                {/* <a> */}
+                <a>
                 {item.name}
-                {/* </a> */}
+                </a>
               </Link>
             );
           }
