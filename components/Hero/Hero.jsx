@@ -23,7 +23,7 @@ const Hero = ({ head, title, body, signature, button, animition, background }) =
         <h2
           style={{
             color: background === "white" && "black",
-            fontSize: title && "60px",
+            fontSize: head && "60px",
           }}
         >
           {title}
@@ -39,10 +39,10 @@ const Hero = ({ head, title, body, signature, button, animition, background }) =
           <a className="secondary-btn">{button}</a>
         </Link>
       </div>
-      <div className={styles.right} style={{justifyContent: title && 'center'}}>
+      <div className={styles.right} style={{justifyContent: head && 'center'}}>
         <div
           className={
-            title ? styles.anotherStyleForImgWrapper : styles.imgWrapper
+            head ? styles.anotherStyleForImgWrapper : styles.imgWrapper
           }
         >
           <Image src={photo} alt="photo" />
