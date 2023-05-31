@@ -15,6 +15,7 @@ import Image from 'next/image';
 import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const variants = {
   open: { opacity: 1,
@@ -41,9 +42,9 @@ const Header = () => {
   ]
 
   const nestedNavItems = [
-    {name: 'Book a table', id: 1, path: '/reservation'},
-    {name: 'Our Chefs', id: 2, path: '/chefs'},
-    {name: 'Chef Single', id: 3, path: '/chef'},
+    {name: 'Book a table', id: 1, path: '/book-a-table'},
+    {name: 'Our Chefs', id: 2, path: '/our-chefs'},
+    {name: 'Chef Single', id: 3, path: '/chef-single'},
     {name: 'Recipe', id: 4, path: '/recipe'},
     {name: 'Gallery', id: 5, path: '/gallery'},
     {name: 'Gallery Single', id: 6, path: '/gallery-single'},
@@ -53,6 +54,7 @@ const Header = () => {
   const [active, setActive] = useState(false)
   const [menu, setMenu] = useState(false)
   const ref = useRef(null);
+  const router = useRouter()
 
   const closeOpenMenus = useCallback(
     // mobNavItemChild
@@ -66,7 +68,7 @@ const Header = () => {
           ref.current.contains(e.target)
         ) {
           setActive(false);
-          // console.log(e.target.className);
+          if(e.target.href) router.push(e.target.href)
         }
     },
     [active]
@@ -77,25 +79,32 @@ const Header = () => {
     return () => {
       document.removeEventListener("mousedown", closeOpenMenus);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active]);
 
   
   return (
     <motion.div
       className={styles.head}
-      initial={{ opacity: 0,
-      //  scale: 0.5,
-        translateX: -100 }}
-      animate={{ opacity: 1,
-      //  scale: 1,
-       translateX: 0 }}
+      initial={{
+        opacity: 0,
+        //  scale: 0.5,
+        translateX: -100,
+      }}
+      animate={{
+        opacity: 1,
+        //  scale: 1,
+        translateX: 0,
+      }}
       transition={{ duration: 0.3 }}
     >
       <div className={styles.top}>
         <button className="secondary-btn">Call - 123 456 789</button>
         <Image src={Logo} alt="logo" />
 
-        <button className="main-btn">Reservation</button>
+        <Link href={"/book-a-table"}>
+          <button className="main-btn">Reservation</button>
+        </Link>
       </div>
       <div className={styles.center}>
         <div className={styles.navItems}>

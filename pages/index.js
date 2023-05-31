@@ -38,7 +38,25 @@ export default function Home() {
       />
       <About />
       <Menu />
-      <Testomintals />
+      <Testomintals
+        desc={
+          "We love to hear from customers, so please leave a comment or say hello in an email."}
+        align={"start"}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+        enabled={{ clickable: true }}
+        className={"swiper"}
+        navigation={false}
+      />
       <DivWithBack />
       <Offers />
       <Popular />

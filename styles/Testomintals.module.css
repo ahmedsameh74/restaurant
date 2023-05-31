@@ -107,3 +107,35 @@
   color: var(--light);
   font-size: 20px;
 }
+
+
+.horSwiper .slide {
+  align-items: center;
+  justify-content: center;
+  background: unset;
+  flex-direction: column-reverse;
+}
+
+.horSwiper .profile {
+  flex-direction: column;
+  border: none !important;
+}
+
+.horSwiper .profile div {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.horSwiper .slideBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.horSwiper .slideBody p {
+  width: 70%;
+  font-size: 25px;
+  text-align: center;
+}

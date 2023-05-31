@@ -1,0 +1,32 @@
+.chefExperience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: var(--light);
+}
+
+.right, .left {
+    flex: 1;
+}
+
+.right img {
+    width: 100%;
+    height: 680px;
+}
+
+.bar {
+    width: 80%;
+    height: 10px;
+    background: gray;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress {
+    border-radius: 5px;
+    /* width: 10%; */
+    height: 100%;
+    background: black;
+    position: absolute;
+}

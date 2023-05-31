@@ -1,8 +1,8 @@
 import styles from "../../styles/SubHead.module.css";
 
-const SubHead = ({title, subTitle, desc, color, align, width}) => {
+const SubHead = ({title, subTitle, desc, color, align, width, topWidth}) => {
   return (
-    <div className={styles.top}>
+    <div className={styles.top} style={{width: topWidth}}>
       <div className={styles.title} style={{ justifyContent: align }}>
         <h4 style={{ color }}>{title}</h4>
       </div>

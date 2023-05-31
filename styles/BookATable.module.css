@@ -1,0 +1,90 @@
+.reserev {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    flex: 2;
+}
+
+.right {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.right img {
+    width: 70%;
+    height: 640px;
+}
+
+.form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-direction: row;
+    width: 100%;
+}
+
+.inputGroup input {
+    border: 1px solid gray;
+    padding: 20px 5px;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+}
+
+.details {
+    display: flex;
+    padding: 50px;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.details .right {
+    align-items: center;
+    justify-content: center;
+}
+
+.details img {
+    width: 100%;
+}
+
+.icons {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* flex: 1; */
+    border: 2px solid var(--gold);
+    padding: 20px;
+    font-size: 20px !important;
+    color: black !important;
+    gap: 10px;
+}
+
+.icon svg {
+    font-size: 30px !important;
+    color: var(--gold) !important;
+}

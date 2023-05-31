@@ -14,16 +14,24 @@ import SubHead from '../SubHead/SubHead';
 
 SwiperCore.use([Navigation, Pagination]);
 
-const Testomintals = () => {
-  
+const Testomintals = ({
+  navigation,
+  breakpoints,
+  enabled,
+  className,
+  align,
+  desc,
+  topWidth,
+}) => {
   return (
     <div className={styles.testo}>
       <SubHead
+        topWidth={topWidth}
         title="TESTIMONIAL"
         subTitle="What Our Clients Say"
-        desc="We love to hear from customers, so please leave a comment or say hello in an email."
+        desc={desc}
         color="#fff"
-        align="start"
+        align={align}
         width="100%"
       />
       <div className={styles.bottom}>
@@ -31,21 +39,14 @@ const Testomintals = () => {
           spaceBetween={50}
           // onSlideChange={() => console.log("slide change")}
           // onSwiper={(swiper) => console.log(swiper)}
-          modules={[Pagination]}
-          pagination={{ clickable: true }}
-          className={styles.swiper}
+          modules={[Pagination, Navigation]}
+          pagination={enabled}
+          className={styles[className]}
           slidesPerView={3}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            640: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
+          navigation={navigation}
+          allowTouchMove
+          loop={navigation}
+          breakpoints={breakpoints}
         >
           <SwiperSlide>
             <div className={styles.slide}>
@@ -122,12 +123,9 @@ const Testomintals = () => {
                 <p>
                   They known for its fabulous taste and food. Anywhere you go
                   your hunger is satisfied. The best chicken & burgers those are
-                  yummy.{" "}
-                </p>
-                <p>
-                  They known for its fabulous taste and food. Anywhere you go
-                  your hunger is satisfied. The best chicken & burgers those are
-                  yummy.{" "}
+                  yummy They known for its fabulous taste and food. Anywhere you
+                  go your hunger is satisfied. The best chicken & burgers those
+                  are yummy.
                 </p>
               </div>
             </div>
@@ -156,6 +154,6 @@ const Testomintals = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Testomintals

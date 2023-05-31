@@ -14,3 +14,7 @@
 .swiper .swiper-pagination-bullet-active {
   opacity: 1;
 }
+
+.swiper-button-prev, .swiper-button-next {
+  color: var(--gold) !important;
+}

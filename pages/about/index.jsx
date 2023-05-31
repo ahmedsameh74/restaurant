@@ -17,6 +17,7 @@ import {
   BsInstagram,
   BsPinterest,
 } from "react-icons/bs";
+import Testomintals from "../../components/Testomintals/Testomintals";
 
 const aboutItems = [
   {
@@ -44,6 +45,42 @@ const aboutItems = [
     body: "We're in the mind of satisfies the vegan people starving.",
   },
 ];
+
+export const Chefs = ({cols, arr, imgWidth}) => {
+  return (
+    <div className={styles.chiefs}>
+      <SubHead
+        align={"center"}
+        color={"black"}
+        title={"BEST CHEFS"}
+        subTitle={"Meet Our Professional Chefs"}
+        width={"100%"}
+      />
+      <div
+        className={styles.chefs}
+        style={{ display: "grid", gridTemplateColumns: cols }}
+      >
+        {Array.from(arr).map((item) => {
+          return (
+            <div className={styles.singleChef} key={item}>
+              <div className={styles.img}>
+                <Image src={chef} alt="chef" style={{width: imgWidth}}/>
+                <div className={styles.chefSocial} style={{width: imgWidth}}>
+                  <BsFacebook />
+                  <BsInstagram />
+                  <BsPinterest />
+                  <BsTwitter />
+                </div>
+              </div>
+              <h3>Avroko</h3>
+              <p>Master Chef</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 const about = () => {
   return (
@@ -82,30 +119,44 @@ const about = () => {
           })}
           <div className={styles.overlay}></div>
         </div>
-        <div className={styles.chiefs}>
+        <Chefs cols={"repeat(4, 1fr)"} arr={'ahme'} imgWidth={'100%'}/>
+        <Testomintals
+          align={"center"}
+          topWidth={"100%"}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 1,
+            },
+            1024: {
+              slidesPerView: 1,
+            },
+          }}
+          navigation={true}
+          enabled={false}
+          className={"horSwiper"}
+        />
+        <div className={styles.gallery}>
           <SubHead
+            title={"Gallery"}
             align={"center"}
+            subTitle={"We Make Fresh Dishes"}
             color={"black"}
-            title={"BEST CHEFS"}
-            subTitle={"Meet Our Professional Chefs"}
-            width={"100%"}
           />
-          <div className={styles.chefs}>
-            {Array.from("ahme").map((item) => {
-              return (<div className={styles.singleChef} key={item}>
-                <div className={styles.img}>
-                  <Image src={chef} alt="chef" />
-                  <div className={styles.chefSocial}>
-                    <BsFacebook />
-                    <BsInstagram />
-                    <BsPinterest />
-                    <BsTwitter />
-                  </div>
-                </div>
-                <h3>Avroko</h3>
-                <p>Master Chef</p>
-              </div>)
-            })}
+          <div className={styles.galleryWrapper}>
+            <div className={styles.leftCol}>
+              <Image src={chef} alt="gallery" />
+              <Image src={chef} alt="gallery" />
+            </div>
+            <div className={styles.centerCol}>
+              <Image src={chef} alt="gallery" />
+            </div>
+            <div className={styles.rightCol}>
+              <Image src={chef} alt="gallery" />
+              <Image src={chef} alt="gallery" />
+            </div>
           </div>
         </div>
         <Reservation />
