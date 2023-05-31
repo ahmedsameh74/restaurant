@@ -2,7 +2,7 @@ import styles from '../../styles/Header.module.css'
 import Logo from '../../assets/logo.svg'
 import ArrowDown from '../../assets/icons/down-arrow.svg'
 // import {BsFacebook, BsTwitter, BsInstagram, BsPinterest} from 'react-icons/bs';
-import {ImMenu} from 'react-icons/im';
+import { AiOutlineMenu } from "react-icons/ai";
 import {GrClose} from 'react-icons/gr';
 import {
   BsFacebook,
@@ -51,13 +51,23 @@ const Header = () => {
   ]
 
   const [active, setActive] = useState(false)
+  const [menu, setMenu] = useState(false)
   const ref = useRef(null);
 
   const closeOpenMenus = useCallback(
+    // mobNavItemChild
     (e) => {
-      if (ref.current && active && !ref.current.contains(e.target) || ref.current.contains(e.target)) {
-        setActive(false);
+      if (String(e.target.className).includes("mobNavItem") || String(e.target.className).includes("mobNavItemChild")) {
+        // console.log("first");
+        return;
       }
+        if (
+          (ref.current && active && !ref.current.contains(e.target)) ||
+          ref.current.contains(e.target)
+        ) {
+          setActive(false);
+          // console.log(e.target.className);
+        }
     },
     [active]
   );
@@ -73,9 +83,13 @@ const Header = () => {
   return (
     <motion.div
       className={styles.head}
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0,
+      //  scale: 0.5,
+        translateX: -100 }}
+      animate={{ opacity: 1,
+      //  scale: 1,
+       translateX: 0 }}
+      transition={{ duration: 0.3 }}
     >
       <div className={styles.top}>
         <button className="secondary-btn">Call - 123 456 789</button>
@@ -103,9 +117,7 @@ const Header = () => {
                     {nestedNavItems.map((item) => {
                       return (
                         <Link key={item.id} href={item.path} legacyBehavior>
-                          <a>
-                            {item.name}
-                          </a>
+                          <a>{item.name}</a>
                         </Link>
                       );
                     })}
@@ -115,9 +127,7 @@ const Header = () => {
             } else {
               return (
                 <Link key={item.id} href={item.path} legacyBehavior>
-                  <a>
-                  {item.name}
-                  </a>
+                  <a>{item.name}</a>
                 </Link>
               );
             }
@@ -125,7 +135,7 @@ const Header = () => {
         </div>
         {!active ? (
           <div className={styles.burger} onClick={() => setActive(true)}>
-            <ImMenu />
+            <AiOutlineMenu />
           </div>
         ) : (
           <div className={styles.burger} onClick={() => setActive(false)}>
@@ -160,18 +170,26 @@ const Header = () => {
         {navItems.map((item) => {
           if (item.name === "Pages") {
             return (
-              <div key={item.id} className={styles.mobNavItem}>
-                <p>
+              <div
+                key={item.id}
+                className={styles.mobNavItem}
+                onClick={() => setMenu(!menu)}
+              >
+                <p className="mobNavItemChild" onClick={() => setMenu(!menu)}>
                   {item.name}
-                  <Image src={ArrowDown} alt="arrow" width={20} height={20} />
+                  <Image
+                    src={ArrowDown}
+                    className="mobNavItemChild"
+                    alt="arrow"
+                    width={20}
+                    height={20}
+                  />
                 </p>
-                <div>
+                <div style={{ display: menu ? "flex" : "none" }}>
                   {nestedNavItems.map((item) => {
                     return (
                       <Link key={item.id} href={item.path} legacyBehavior>
-                      <a>
-                        {item.name}
-                      </a>
+                        <a>{item.name}</a>
                       </Link>
                     );
                   })}
@@ -181,9 +199,7 @@ const Header = () => {
           } else {
             return (
               <Link key={item.id} href={item.path} legacyBehavior>
-                <a>
-                {item.name}
-                </a>
+                <a>{item.name}</a>
               </Link>
             );
           }

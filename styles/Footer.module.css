@@ -138,6 +138,17 @@
     background: var(--gold);
 }
 
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+}
+
+.bottom a {
+    color: var(--gold);
+}
+
 @media screen and (max-width: 768px) {
     .top {
         flex-direction: column;
@@ -175,10 +186,11 @@
 
     .input {
         flex-direction: column;
+        gap: 15px;
     }
 
     .input button {
-        width: 60%;
+        width: 70%;
         height: 40px;
     }
 }

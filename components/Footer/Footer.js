@@ -8,6 +8,7 @@ import {
 } from "react-icons/bs";
 
 import Image from "next/image";
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -57,6 +58,12 @@ const Footer = () => {
             <p>Mon – Fri: 7.00am – 6.00pm</p>
           </div>
         </div>
+      </div>
+      <div className={styles.bottom}>
+        <p>
+          Developed by{" "}
+          <Link href={"https://github.com/ahmedsameh74"}>Ahmed sameh</Link>
+        </p>
       </div>
     </div>
   );

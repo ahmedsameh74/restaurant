@@ -92,9 +92,9 @@
     cursor: pointer;
 }
 
-.mobNavItem:hover > div {
+/* .mobNavItem:hover > div {
     display: flex;
-}
+} */
 
 .mobNavItem div {
     display: none;
