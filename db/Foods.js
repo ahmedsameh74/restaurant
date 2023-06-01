@@ -1,0 +1,58 @@
+import foods from "../assets/foods.jpg";
+
+export const Food = [
+  {
+    id: 0,
+    name: "Italian Pasta",
+    desc: "Typical spaghetti is made from water, milled wheat, and flour, but authentic spaghetti is made with durum wheat semolina. Spaghetti is Italy's classic pasta that is known for its long, thin, cylindrical shape.",
+    category: ["Main Courses"],
+    date: "October 20, 2023",
+    tags: ["Recipes", "Sweet", "Tasty"],
+    photo: foods,
+  },
+  {
+    id: 1,
+    name: "Stuffed Pasta",
+    desc: "Usually served either in broth or with a pasta sauce, they originated as a traditional food in Italian cuisine. A larger version of ravioli is called ravioloni, a smaller version, ravioletti. They are typically square, though they can be circular.",
+    category: ["Main Courses"],
+    date: "October 20, 2023",
+    tags: ["Recipes", "Sweet", "Tasty"],
+    photo: foods,
+  },
+  {
+    id: 2,
+    name: "Tubular Pasta",
+    desc: "large, tubular pasta with vertical ridges that run lengthwise down the tube. It is slightly larger than penne, and is often served with meat ragu, as well as a variety of light and heavy sauces like this rigatoni in salsa rosa recipe.",
+    category: ["Main Courses"],
+    date: "October 20, 2023",
+    tags: ["Recipes", "Sweet", "Tasty"],
+    photo: foods,
+  },
+  {
+    id: 3,
+    name: "Italian Pasta",
+    desc: "Typical spaghetti is made from water, milled wheat, and flour, but authentic spaghetti is made with durum wheat semolina. Spaghetti is Italy's classic pasta that is known for its long, thin, cylindrical shape.",
+    category: ["Main Courses"],
+    date: "October 20, 2023",
+    tags: ["Recipes", "Sweet", "Tasty"],
+    photo: foods,
+  },
+  {
+    id: 4,
+    name: "Stuffed Pasta",
+    desc: "Usually served either in broth or with a pasta sauce, they originated as a traditional food in Italian cuisine. A larger version of ravioli is called ravioloni, a smaller version, ravioletti. They are typically square, though they can be circular.",
+    category: ["Main Courses"],
+    date: "October 20, 2023",
+    tags: ["Recipes", "Sweet", "Tasty"],
+    photo: foods,
+  },
+  {
+    id: 5,
+    name: "Tubular Pasta",
+    desc: "large, tubular pasta with vertical ridges that run lengthwise down the tube. It is slightly larger than penne, and is often served with meat ragu, as well as a variety of light and heavy sauces like this rigatoni in salsa rosa recipe.",
+    category: ["Main Courses"],
+    date: "October 20, 2023",
+    tags: ["Recipes", "Sweet", "Tasty"],
+    photo: foods,
+  },
+];

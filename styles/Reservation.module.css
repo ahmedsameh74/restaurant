@@ -9,6 +9,21 @@
     background-size: cover;
 }
 
+.reserv {
+    background: var(--blue-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.reserv .reservationForm {
+    width: 100%;
+    border: 1px solid gray;
+    padding: 100px 50px !important; 
+}
+
 .reservationForm {
     backdrop-filter: blur(5px);
     background: #292e36f2;

@@ -10,6 +10,7 @@ import food from '../../assets/chef.jpg'
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+
 const index = () => {
     const bars = [
       { name: "Experienced", to: "75%", id: 0 },
@@ -28,7 +29,7 @@ const index = () => {
 
       <div>
         <PageHead title={"Our Chefs"} />
-        <Chefs cols={"repeat(3, 1fr)"} arr={"yasmine"} imgWidth={"90%"} />
+        <Chefs cols={"repeat(3, 1fr)"} arr={6} imgWidth={"90%"} />
         <Testomintals
           align={"center"}
           topWidth={"100%"}

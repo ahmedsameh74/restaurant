@@ -41,9 +41,11 @@
     margin-top: 10px;
 }
 
-.singleChef h3 {
+.singleChef a {
     font-size: 30px;
     font-weight: 500;
+    color: #333;
+    margin-top: 10px;
 }
 
 .singleChef p {

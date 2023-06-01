@@ -1,0 +1,159 @@
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light);
+  gap: 20px;
+  width: 100%;
+}
+
+.galleryContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  background: var(--light);
+  gap: 20px;
+}
+
+.left,
+.right {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 20px;
+}
+
+.top,
+.bottom {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: 360px;
+}
+
+.top img,
+.bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left .top,
+.right .bottom {
+  grid-template-columns: 1fr 1fr;
+}
+
+.left .bottom,
+.right .top {
+  grid-template-columns: 1fr;
+}
+
+.img {
+  position: relative;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00000096;
+}
+
+.img:hover > .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.overlay h2,
+.overlay p {
+  margin: 0;
+}
+
+.overlay h2 {
+  font-size: 25px;
+  color: var(--gold);
+}
+
+.overlay p {
+  font-size: 20px;
+  color: var(--light);
+}
+
+.background {
+  /* background: url('../assets/background.jpg'); */
+  position: relative;
+  padding: 100px 50px;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 115px 0;
+}
+
+.imgBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: brightness(0.4);
+  z-index: -1;
+}
+
+.imgBack img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.container {
+    display: flex;
+    padding: 100px 50px;
+    background: var(--light);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.upper, .lower {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 435px;
+    /* gap: 20px; */
+}
+
+.content, .image, .contentl {
+    height: 100%;
+}
+
+.content, .contentl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.contentl {
+    margin-left: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

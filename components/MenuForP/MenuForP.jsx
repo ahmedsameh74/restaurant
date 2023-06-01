@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import MenuItem from '../MenuItem/MenuItem';
 import { motion } from 'framer-motion';
-import { menu } from '../Menu/Menu';
+import { menu } from '../../db/Menu'
 import styles from "../../styles/MenuForP.module.css";
 
 import foods from "../../assets/foods.jpg";

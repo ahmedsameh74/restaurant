@@ -17,6 +17,7 @@ import {
   BsInstagram,
   BsPinterest,
 } from "react-icons/bs";
+import { Chefs as chefsDb } from "../../db/chefs";
 import Testomintals from "../../components/Testomintals/Testomintals";
 
 const aboutItems = [
@@ -60,20 +61,24 @@ export const Chefs = ({cols, arr, imgWidth}) => {
         className={styles.chefs}
         style={{ display: "grid", gridTemplateColumns: cols }}
       >
-        {Array.from(arr).map((item) => {
+        {chefsDb.slice(0, arr).map((item) => {
           return (
-            <div className={styles.singleChef} key={item}>
+            <div className={styles.singleChef} key={item.id}>
               <div className={styles.img}>
-                <Image src={chef} alt="chef" style={{width: imgWidth}}/>
-                <div className={styles.chefSocial} style={{width: imgWidth}}>
+                <Image
+                  src={item.photo}
+                  alt="chef"
+                  style={{ width: imgWidth }}
+                />
+                <div className={styles.chefSocial} style={{ width: imgWidth }}>
                   <BsFacebook />
                   <BsInstagram />
                   <BsPinterest />
                   <BsTwitter />
                 </div>
               </div>
-              <h3>Avroko</h3>
-              <p>Master Chef</p>
+              <Link href={`/chef-single/${item.id}`}>{item.name}</Link>
+              <p>{item.title}</p>
             </div>
           );
         })}
@@ -119,7 +124,7 @@ const about = () => {
           })}
           <div className={styles.overlay}></div>
         </div>
-        <Chefs cols={"repeat(4, 1fr)"} arr={'ahme'} imgWidth={'100%'}/>
+        <Chefs cols={"repeat(4, 1fr)"} arr={4} imgWidth={'100%'}/>
         <Testomintals
           align={"center"}
           topWidth={"100%"}

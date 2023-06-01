@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../../styles/Reservation.module.css'
 
-const Reservation = () => {
+const Reservation = ({className}) => {
     const [info, setInfo] = useState({
         name: '',
         email: '',
@@ -36,7 +36,7 @@ const Reservation = () => {
 
 
   return (
-    <div className={styles.reservation}>
+    <div className={className ? styles[className] : styles.reservation}>
       <form
         className={styles.reservationForm}
         onSubmit={handleSubmit}
