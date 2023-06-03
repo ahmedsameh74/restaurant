@@ -44,10 +44,10 @@ const Header = () => {
   const nestedNavItems = [
     {name: 'Book a table', id: 1, path: '/book-a-table'},
     {name: 'Our Chefs', id: 2, path: '/our-chefs'},
-    {name: 'Chef Single', id: 3, path: '/chef-single'},
+    // {name: 'Chef Single', id: 3, path: '/chef-single'},
     {name: 'Recipe', id: 4, path: '/recipe'},
     {name: 'Gallery', id: 5, path: '/gallery'},
-    {name: 'Gallery Single', id: 6, path: '/gallery-single'},
+    // {name: 'Gallery Single', id: 6, path: '/gallery-single'},
     {name: 'FAQ', id: 7, path: '/faq'}
   ]
 
