@@ -17,6 +17,7 @@
     height: 500px;
     aspect-ratio: unset;
     object-fit: cover;
+    
 }
 
 .table {
@@ -25,7 +26,13 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background: var(--light);
+    /* background: var(--light); */
+}
+
+.table h2 {
+  margin: 0;
+  font-size: 35px;
+  margin-bottom: 20px;
 }
 
 .tableContainer {
@@ -33,7 +40,7 @@
   grid-template-columns: 2fr 1fr;
   width: 100%;
   border-top: 1px solid gray;
-  
+  /* margin-top: 15px; */
 }
 
 .left {
@@ -47,11 +54,15 @@
   gap: 20px;
 }
 
+.ingredient img {
+  border: 1px solid gray;
+}
+
 .leftCont {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  padding: 15px 0;
+  padding: 40px 0;
 }
 
 .right {
@@ -63,7 +74,7 @@
 
 .rightWrapper {
   width: 100%;
-    padding: 15px;
+    padding: 40px 15px;
 }
 
 .rightWrapper img {
@@ -91,21 +102,61 @@
       display: grid;
     grid-template-columns: 2fr 1fr;
     width: 100%;
+    margin-top: 40px;
+    gap: 90px;
 }
 
-.bottomTableContainer .left {
+.bottomTableContainer .left, .bottomTableContainer .right {
   border: none;
+      display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px;
 }
 
-.bottomTableContainer .right {
-  justify-content: flex-start;
+
+.bottomTableContainer .left h2 {
+  margin: 0;
+  /* margin-left: 30px; */
+  font-size: 35px;
+}
+.bottomTableContainer .right h2 {
+  margin: 0;
+  font-size: 35px;
 }
 
-.instructions {
+.instructions, .nutrition {
   display: flex;
-  align-items: flex-start;
-  position: relative;
-  flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 1px solid gray;
+    padding-top: 40px;
+}
+
+.nutrition {
+  width: 100%;
+  gap: 0;
+}
+
+.nutInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nutInfo p {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.nutInfo div {
+  flex: 1;
+  border-bottom: 1px dashed black;
+  margin: 0 15px;
 }
 
 .instr h3, .instr p{
@@ -113,6 +164,22 @@
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
+    margin: 0;
+}
+
+.instr p {
+  padding-left: 35px;
+  padding-top: 15px;
+  margin-left: 11px;
+  position: relative;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  text-align: justify;
+}
+
+.instr h3{
+  font-size: 25px;
 }
 
 
@@ -121,12 +188,19 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px dashed var(--gold);
+  border: 2px solid var(--gold);
 }
 
 .instr p::before {
-  content: '';
-  width: 2px;
-  height: 10px;
-  background: var(--gold);
+  content: "";
+    /* width: 1px; */
+    border-left: 2px dashed gray ;
+    height: 95px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.instr:last-child p::before {
+  content: unset;
 }

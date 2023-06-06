@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 const index = ({data}) => {
   // const router = useRouter()
-  console.log(data[0].tags.map((item) => `${item}`).join(', '));
+  // console.log(data[0].tags.map((item) => `${item}`).join(', '));
   return (
     <>
       <Head>
@@ -38,7 +38,7 @@ const index = ({data}) => {
               <p>
                 <span>TAGS:</span> {data[0].tags.map((item) => `${item}`).join(', ')}
               </p>
-              <Link href={"/reciepe"} className="secondary-btn">
+              <Link href={`/recipe/${data[0].id}`} className="secondary-btn">
                 See Reciepe
               </Link>
             </div>
@@ -74,7 +74,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   // const router = useRouter()
   const { params } = context;
-  console.log(params);
+  // console.log(params);
   const data = Food.filter(item => item.id === Number(params.id) )
   return {
     props: {
