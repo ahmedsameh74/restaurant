@@ -69,13 +69,12 @@ const Index = () => {
           <div className={styles.questions}>
             {Array.from('yass').map((item, i) => {
                 return (
-                  <div className={styles.question} key={i}>
-                    <div
-                      className={styles.questionHead}
-                      onClick={() =>
-                        setActive({ open: !active.open, index: i })
-                      }
-                    >
+                  <div
+                    className={styles.question}
+                    key={i}
+                    onClick={() => setActive({ open: !active.open, index: i })}
+                  >
+                    <div className={styles.questionHead}>
                       <p>How long is this course in live?</p>
                       <motion.div
                         animate={
@@ -90,7 +89,9 @@ const Index = () => {
                       </motion.div>
                     </div>
                     <motion.div
-                      animate={active.open && active.index === i ? "open" : "closed"}
+                      animate={
+                        active.open && active.index === i ? "open" : "closed"
+                      }
                       variants={variants}
                       initial="closed"
                       exit="collapsed"
