@@ -5,23 +5,9 @@ import fooods from "../../assets/fooood.jpeg";
 import Image from "next/image";
 import styles from "../../styles/BlogSection.module.css";
 
-const BlogSection = () => {
+export const BlogCard = () => {
   return (
-    <Layout>
-      <SubHead
-        title={"BLOG"}
-        subTitle={"Be First Who Read News"}
-        desc={
-          "Explore the latest stories about our dishes, offers, events and future plans here."
-        }
-        color={"#555"}
-        align={"center"}
-        width={"70%"}
-      />
-      <div className={styles.bottom}>
-        {Array.from("ah").map((item, index) => {
-          return (
-            <div className={styles.card} key={index}>
+      <div className={styles.card}>
               <div className={styles.cardImg}>
                 <Image src={foods} alt="foods" />
                 <div className={styles.btnOverlay}>
@@ -41,7 +27,25 @@ const BlogSection = () => {
                 </p>
               </div>
             </div>
-          );
+  )
+}
+
+const BlogSection = () => {
+  return (
+    <Layout>
+      <SubHead
+        title={"BLOG"}
+        subTitle={"Be First Who Read News"}
+        desc={
+          "Explore the latest stories about our dishes, offers, events and future plans here."
+        }
+        color={"#555"}
+        align={"center"}
+        width={"70%"}
+      />
+      <div className={styles.bottom}>
+        {Array.from("ah").map((item, index) => {
+          return <BlogCard key={index} />;
         })}
       </div>
     </Layout>

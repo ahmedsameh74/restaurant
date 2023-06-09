@@ -37,7 +37,7 @@ const Header = () => {
     {name: 'About Us', path: '/about', id: 2, isActive: false},
     {name: 'Our Menu', path: '/our-menu', id: 3, isActive: false},
     {name: 'Pages', path: '/', id: 4, isActive: false},
-    {name: 'Blog', path: '/blog', id: 5, isActive: false},
+    {name: 'Blog', path: '/blogs', id: 5, isActive: false},
     {name: 'Contact Us', path: '/contact', id: 6, isActive: false}
   ]
 

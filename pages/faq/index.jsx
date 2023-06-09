@@ -51,8 +51,8 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>Gallery | Restaurant</title>
-        <meta name="description" content="restaurant Gallery page" />
+        <title>FAQ | Restaurant</title>
+        <meta name="description" content="restaurant FAQ page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
