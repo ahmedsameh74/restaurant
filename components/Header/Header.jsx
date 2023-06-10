@@ -1,7 +1,6 @@
 import styles from '../../styles/Header.module.css'
 import Logo from '../../assets/logo.svg'
 import ArrowDown from '../../assets/icons/down-arrow.svg'
-// import {BsFacebook, BsTwitter, BsInstagram, BsPinterest} from 'react-icons/bs';
 import { AiOutlineMenu } from "react-icons/ai";
 import {GrClose} from 'react-icons/gr';
 import {
@@ -33,13 +32,13 @@ const variants = {
 
 const Header = () => {
   const navItems = [
-    {name: 'Home', path: '/', id: 1, isActive: true},
-    {name: 'About Us', path: '/about', id: 2, isActive: false},
-    {name: 'Our Menu', path: '/our-menu', id: 3, isActive: false},
-    {name: 'Pages', path: '/', id: 4, isActive: false},
-    {name: 'Blog', path: '/blogs', id: 5, isActive: false},
-    {name: 'Contact Us', path: '/contact-us', id: 6, isActive: false}
-  ]
+    { name: "Home", path: "/", id: 1, isActive: true },
+    { name: "About Us", path: "/about", id: 2, isActive: false },
+    { name: "Our Menu", path: "/our-menu", id: 3, isActive: false },
+    { name: "Pages", path: "/", id: 4, isActive: false },
+    { name: "Blog", path: "/blogs", id: 5, isActive: false },
+    { name: "Contact Us", path: "/contact-us", id: 6, isActive: false },
+  ];
 
   const nestedNavItems = [
     {name: 'Book a table', id: 1, path: '/book-a-table'},

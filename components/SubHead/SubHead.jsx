@@ -8,7 +8,7 @@ const SubHead = ({title, subTitle, desc, color, align, width, topWidth}) => {
       </div>
       <div className={styles.header} style={{alignItems: align}}>
         <h3 style={{color}}>{subTitle}</h3>
-        <p style={{textAlign: align, width, color}}>{desc}</p>
+        {desc && <p style={{textAlign: align, width, color}}>{desc}</p>}
       </div>
     </div>
   );
