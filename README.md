@@ -5,3 +5,9 @@
 * css 
 * framer-motion
 * swiperJs
+
+## To be continue..
+* single blog page
+* compress the image
+* fix the responsivty 
+* optimize the website
