@@ -37,8 +37,6 @@ const Testomintals = ({
       <div className={styles.bottom}>
         <Swiper
           spaceBetween={50}
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => console.log(swiper)}
           modules={[Pagination, Navigation]}
           pagination={enabled}
           className={styles[className]}

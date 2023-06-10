@@ -1,11 +1,8 @@
 import Head from "next/head";
 import styles from '../../styles/ChefSingle.module.css'
 import Image from "next/image";
-import food from '../../assets/chef.jpg'
 import PageHead from "../../components/PageHead/PageHead";
-import { MdEditNote } from "react-icons/md";
 import { motion } from 'framer-motion';
-import { TbClockHour2 } from "react-icons/tb";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoMdMail, IoIosCall } from "react-icons/io";
 import {BsBriefcaseFill} from 'react-icons/bs'
@@ -19,7 +16,7 @@ import Reservation from "../../components/Reservation/Reservation";
 import { Chefs } from "../../db/chefs";
 
 const index = ({data}) => {
-  console.log(data)
+
   return (
     <>
       <Head>
@@ -70,7 +67,6 @@ const index = ({data}) => {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
-                //   animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 className={styles.item}
@@ -85,7 +81,6 @@ const index = ({data}) => {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
-                //   animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 className={styles.item}

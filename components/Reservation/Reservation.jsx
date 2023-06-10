@@ -40,7 +40,6 @@ const Reservation = ({className}) => {
       <form
         className={styles.reservationForm}
         onSubmit={handleSubmit}
-        // style={{ display: success ? "none" : "flex" }}
       >
         <div className={styles.formHead}>
           <h3>RESERVATION</h3>
@@ -128,18 +127,11 @@ const Reservation = ({className}) => {
         {success && (
           <div
             className={styles.success}
-            // style={{ display: success ? "flex" : "none" }}
           >
             <button>Thank you! Your submission has been received!</button>
           </div>
         )}
       </form>
-      {/* <div
-        className={styles.success}
-        style={{ display: success ? "flex" : "none" }}
-      >
-        <button>Thank you! Your submission has been received!</button>
-      </div> */}
     </div>
   );
 }

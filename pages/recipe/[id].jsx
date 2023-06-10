@@ -1,17 +1,14 @@
 import Head from 'next/head'
-import React from 'react'
 import PageHead from '../../components/PageHead/PageHead'
 import Image from 'next/image';
 import food from '../../assets/foods.jpg'
 import styles from '../../styles/Recipe.module.css'
-// import onion from '../../assets/onion.jpg'
 import { Food } from '../../db/Foods';
 
 
 
 
 const index = ({data}) => {
-  console.log(data[0])
   return (
     <>
       <Head>
@@ -77,33 +74,6 @@ const index = ({data}) => {
                     </div>
                   );
                 })}
-                {/* <div className={styles.instr}>
-                  <h3>hhhhhhh</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Debitis ea placeat perspiciatis maxime quis eligendi vel
-                    aperiam asperiores quibusdam inventore, velit officiis et
-                    eos totam quod neque accusantium quisquam tempora?
-                  </p>
-                </div>
-                <div className={styles.instr}>
-                  <h3>hhhhhhh</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Debitis ea placeat perspiciatis maxime quis eligendi vel
-                    aperiam asperiores quibusdam inventore, velit officiis et
-                    eos totam quod neque accusantium quisquam tempora?
-                  </p>
-                </div>
-                <div className={styles.instr}>
-                  <h3>hhhhhhh</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Debitis ea placeat perspiciatis maxime quis eligendi vel
-                    aperiam asperiores quibusdam inventore, velit officiis et
-                    eos totam quod neque accusantium quisquam tempora?
-                  </p>
-                </div> */}
               </div>
             </div>
             <div className={styles.right}>
@@ -171,7 +141,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const {params} = context;
-  console.log(params);
+  
   const data = Food.filter(item => item.id === Number(params.id))
   return {
     props: {

@@ -14,11 +14,9 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.top}>
-        {/* <button className="secondary-btn">Call - 123 456 789</button> */}
         <p>#RestName</p>
         <Image src={Logo} alt="logo" />
 
-        {/* <button className="main-btn">Reservation</button> */}
         <div className={styles.icons}>
           <a>
             <BsInstagram />

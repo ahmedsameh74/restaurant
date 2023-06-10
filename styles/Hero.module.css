@@ -17,10 +17,6 @@
     flex-direction: column;
 }
 
-/* .mainTitle {
-
-} */
-
 .mainTitle::after, .mainTitle::before {
     content: "";
     width: 100%;
@@ -134,8 +130,6 @@
 
     .setting {
         right: 100px;
-        /* width: 200px;
-        height: 200px; */
         top: -30px;
         transform-origin: center;
     }

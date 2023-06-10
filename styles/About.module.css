@@ -56,9 +56,6 @@
 }
 
 .bottom {
-    /* display: flex;
-    align-items: flex-start;
-    justify-content: center; */
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     gap: 50px;

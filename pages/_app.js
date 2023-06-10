@@ -5,8 +5,6 @@ import '../styles/globals.css'
 import '../styles/swiper.css'
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-  console.log(router.pathname);
 
   return <>
   <Header/>

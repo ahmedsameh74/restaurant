@@ -23,13 +23,6 @@ const index = () => {
           <div className={styles.gallery}>
             <div className={styles.left}>
               <div className={styles.top}>
-                {/* <div className={styles.img}>
-                  <Image src={food} alt="" />
-                  <div className={styles.overlay}>
-                    <h2>Food</h2>
-                    <p>description</p>
-                  </div>
-                </div> */}
                 {Food.slice(0, 2).map((item) => {
                   return (
                     <div className={styles.img} key={item.id}>
@@ -106,7 +99,6 @@ const index = () => {
             }
             align={"start"}
             color={"white"}
-            // topWidth={"55%"}
           />
           <Link href={"/book-a-table"} className="secondary-btn">
             Book a Table
@@ -126,7 +118,6 @@ const index = () => {
                 }
                 align={"start"}
                 color={"black"}
-                // topWidth={"55%"}
               />
               <Link href={"/our-menu"} className="secondary-btn">
                 View Menu
@@ -149,7 +140,6 @@ const index = () => {
                 }
                 align={"start"}
                 color={"black"}
-                // topWidth={"55%"}
               />
               <Link href={"/our-menu"} className="secondary-btn">
                 View Menu

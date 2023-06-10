@@ -18,14 +18,10 @@ import { useRouter } from 'next/router';
 
 const variants = {
   open: { opacity: 1,
-    //  y: 0,
-    //   scaleY: 1,
        height: 'auto',
       },
   closed: { 
     opacity: 0,
-    //  scaleY: 0,
-    //  y: 0,
       height: 0,
     },
 }
@@ -43,10 +39,7 @@ const Header = () => {
   const nestedNavItems = [
     {name: 'Book a table', id: 1, path: '/book-a-table'},
     {name: 'Our Chefs', id: 2, path: '/our-chefs'},
-    // {name: 'Chef Single', id: 3, path: '/chef-single'},
-    // {name: 'Recipe', id: 4, path: '/recipe'},
     {name: 'Gallery', id: 5, path: '/gallery'},
-    // {name: 'Gallery Single', id: 6, path: '/gallery-single'},
     {name: 'FAQ', id: 7, path: '/faq'}
   ]
 
@@ -55,11 +48,10 @@ const Header = () => {
   const ref = useRef(null);
   const router = useRouter()
 
+
   const closeOpenMenus = useCallback(
-    // mobNavItemChild
     (e) => {
       if (String(e.target.className).includes("mobNavItem") || String(e.target.className).includes("mobNavItemChild")) {
-        // console.log("first");
         return;
       }
         if (
@@ -87,12 +79,10 @@ const Header = () => {
       className={styles.head}
       initial={{
         opacity: 0,
-        //  scale: 0.5,
         translateX: -100,
       }}
       animate={{
         opacity: 1,
-        //  scale: 1,
         translateX: 0,
       }}
       transition={{ duration: 0.3 }}
@@ -113,9 +103,6 @@ const Header = () => {
                 <div
                   key={item.id}
                   className={styles.navItem}
-                  // initial={{ opacity: 0, scale: 0.5 }}
-                  // animate={{ opacity: 1, scale: 1 }}
-                  // transition={{ duration: 0.5 }}
                 >
                   <p>
                     {item.name}
@@ -125,7 +112,13 @@ const Header = () => {
                     {nestedNavItems.map((item) => {
                       return (
                         <Link key={item.id} href={item.path} legacyBehavior>
-                          <a>{item.name}</a>
+                          <a
+                            className={
+                              router.pathname.includes(item.path) && styles.activee
+                            }
+                          >
+                            {item.name}
+                          </a>
                         </Link>
                       );
                     })}
@@ -134,8 +127,16 @@ const Header = () => {
               );
             } else {
               return (
-                <Link key={item.id} href={item.path} legacyBehavior>
-                  <a>{item.name}</a>
+                <Link
+                  key={item.id}
+                  href={item.path}
+                  legacyBehavior
+                >
+                  <a
+                  className={router.pathname === item.path && styles.activee}
+                  >
+                  {item.name}
+                  </a>
                 </Link>
               );
             }
@@ -173,7 +174,6 @@ const Header = () => {
         initial="closed"
         exit="collapsed"
         ref={ref}
-        // style={{ display: active ? "flex" : "none" }}
       >
         {navItems.map((item) => {
           if (item.name === "Pages") {

@@ -1,7 +1,6 @@
 import Layout from "../Layout/Layout";
 import SubHead from "../SubHead/SubHead";
 import foods from "../../assets/foood.jpg";
-import fooods from "../../assets/fooood.jpeg";
 import Image from "next/image";
 import styles from "../../styles/BlogSection.module.css";
 
@@ -44,7 +43,7 @@ const BlogSection = () => {
         width={"70%"}
       />
       <div className={styles.bottom}>
-        {Array.from("ah").map((item, index) => {
+        {Array.from("Ya").map((item, index) => {
           return <BlogCard key={index} />;
         })}
       </div>

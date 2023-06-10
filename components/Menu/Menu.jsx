@@ -22,7 +22,6 @@ const Menu = () => {
         transition={{ duration: 0.5 }}
         className={styles.sideNav}
       >
-        {/* <div className={styles.sideNav}> */}
         <SubHead
           title="MENU"
           subTitle="Try Our Special Dishes"
@@ -42,10 +41,8 @@ const Menu = () => {
             See All Dishes
           </a>
         </Link>
-        {/* </div> */}
       </motion.div>
       <div className={styles.menu}>
-        {/* <MenuItem /> */}
         {menu.map((item) => {
           return (
             <MenuItem key={item.id} name={item.name} dishes={item.dishes} />

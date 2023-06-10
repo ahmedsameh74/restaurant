@@ -90,7 +90,6 @@
 }
 
 .background {
-  /* background: url('../assets/background.jpg'); */
   position: relative;
   padding: 100px 50px;
   height: 500px;
@@ -134,7 +133,6 @@
     justify-content: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 435px;
-    /* gap: 20px; */
 }
 
 .content, .image, .contentl {
@@ -181,5 +179,4 @@
     justify-content: center;
   }
 
-  
 }

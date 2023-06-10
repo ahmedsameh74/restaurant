@@ -26,7 +26,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    /* background: var(--light); */
 }
 
 .table h2 {
@@ -40,7 +39,6 @@
   grid-template-columns: 2fr 1fr;
   width: 100%;
   border-top: 1px solid gray;
-  /* margin-top: 15px; */
 }
 
 .left {
@@ -118,7 +116,6 @@
 
 .bottomTableContainer .left h2 {
   margin: 0;
-  /* margin-left: 30px; */
   font-size: 35px;
 }
 .bottomTableContainer .right h2 {
@@ -193,7 +190,6 @@
 
 .instr p::before {
   content: "";
-    /* width: 1px; */
     border-left: 2px dashed gray ;
     height: 115%;
     position: absolute;

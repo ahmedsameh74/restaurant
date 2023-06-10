@@ -62,7 +62,6 @@
   flex-direction: column;
 }
 
-/*slide */
 .slide {
   display: flex;
   align-items: flex-start;

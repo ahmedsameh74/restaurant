@@ -2,15 +2,12 @@ import Head from "next/head";
 import PageHead from "../../components/PageHead/PageHead";
 import styles from '../../styles/GallerySingle.module.css'
 import Image from "next/image";
-import food from "../../assets/foods.jpg";
 import Link from "next/link";
 import Reservation from "../../components/Reservation/Reservation";
 import { Food } from "../../db/Foods";
-import { useRouter } from "next/router";
 
 const index = ({data}) => {
-  // const router = useRouter()
-  // console.log(data[0].tags.map((item) => `${item}`).join(', '));
+
   return (
     <>
       <Head>
@@ -72,9 +69,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  // const router = useRouter()
   const { params } = context;
-  // console.log(params);
+
   const data = Food.filter(item => item.id === Number(params.id) )
   return {
     props: {

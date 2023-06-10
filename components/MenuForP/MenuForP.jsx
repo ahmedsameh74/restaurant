@@ -19,14 +19,6 @@ const MenuForP = ({flex, index}) => {
         <div className={styles.photo}>
           <Image src={foods} alt="foods" />
         </div>
-        {/* <Link href={"/our-menu"}>
-          <a
-            className="secondary-btn"
-            style={{ width: "50%", fontSize: "19px" }}
-          >
-            See All Dishes
-          </a>
-        </Link> */}
       </motion.div>
       <div className={styles.menu}>
         <MenuItem name={menu[index].name} dishes={menu[index].dishes} style={styles.cat}/>
