@@ -5,9 +5,5 @@
 * css 
 * framer-motion
 * swiperJs
+* JPEGmini
 
-## To be continue..
-* single blog page
-* compress the image
-* fix the responsivty 
-* optimize the website
