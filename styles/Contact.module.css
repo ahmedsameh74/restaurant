@@ -136,6 +136,7 @@
     color: #333;
     border: 1px solid #333;
     resize: none;
+    height: 200px;
 }
 
 .inputGroup textarea::placeholder {
@@ -164,7 +165,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #333;
+    border: 1px solid #cac9c9;
     padding-left: 40px;
 }
 
@@ -270,5 +271,27 @@
     .card .img img {
         width: 100%;
         height: 200px;
+    }
+
+    .header p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .inputGroup {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .inputGroup input {
+        width: 100%;
+    }
+
+    .left {
+        padding: 40px 20px;
+    }
+
+    .body {
+        padding: 100px 20px;
     }
 }

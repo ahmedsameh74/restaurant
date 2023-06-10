@@ -207,6 +207,7 @@
 @media screen and (max-width: 650px) {
     .banner {
         margin: 0;
+        padding: 50px 20px;
     }
     .chefs {
         grid-template-columns: 1fr !important;

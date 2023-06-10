@@ -125,4 +125,12 @@
     .icons {
         grid-template-columns: 1fr;
     }
+
+    .inputGroup {
+        flex-direction: column;
+    }
+
+    .right img {
+        height: 480px;
+    }
 }

@@ -90,10 +90,25 @@
 @media screen and (max-width: 950px) {
     .chef {
         flex-direction: column;
+        align-items: center;
     }
 
     .chef .right .center {
         grid-template-columns: 1fr;
+    }
+
+    .item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
 
     .bottom {
@@ -108,4 +123,16 @@
     }
 
 
+}
+
+@media screen and (max-width: 750px) {
+    .left img {
+        height: 300px;
+    }
+
+    .top {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 }

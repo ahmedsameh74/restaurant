@@ -85,7 +85,7 @@ const index = () => {
                 <input type="text" placeholder="Timing" />
               </div>
               <div className={styles.inputGroup}>
-                <textarea cols="30" rows="10" placeholder="Message"></textarea>
+                <textarea placeholder="Message"></textarea>
               </div>
               <button className="secondary-btn">Submit Now</button>
             </div>

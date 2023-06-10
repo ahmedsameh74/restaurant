@@ -83,3 +83,12 @@
         text-align: center;
     }
 }
+
+@media screen and (max-width: 750px) {
+    .right {
+        text-align: center;
+    }
+    .right h2 {
+        font-size: 40px;
+    }
+}

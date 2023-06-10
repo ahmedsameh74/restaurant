@@ -70,6 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   flex-direction: column;
   gap: 20px;
 }
@@ -179,4 +180,14 @@
     justify-content: center;
   }
 
+}
+
+@media screen and (max-width: 650px) {
+  .galleryContainer {
+    padding: 50px 20px;
+  }
+
+  .overlay {
+    text-align: center;
+  }
 }

@@ -23,3 +23,10 @@
     margin: 10px 0;
     background: var(--gold);
 }
+
+@media screen and (max-width: 650px) {
+    .Head p {
+        text-align: center;
+        font-size: 25px;
+    }
+}

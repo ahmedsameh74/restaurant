@@ -146,8 +146,13 @@
     .reservation {
         padding: 4.5rem 1.5rem;
     }
+    .reserv .reservationForm {
+        padding: 40px 20px !important;
+        width: 100%;
+    }
+
     .reservationForm {
-        padding: 90px 45px;
+        padding: 40px 20px !important;
         width: 100%;
     }
 

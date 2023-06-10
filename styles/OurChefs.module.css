@@ -55,4 +55,8 @@
     .left a {
         width: 60% !important;
     }
+
+    .right img {
+    height: 480px !important;
+}
 }
