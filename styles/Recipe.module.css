@@ -195,7 +195,7 @@
   content: "";
     /* width: 1px; */
     border-left: 2px dashed gray ;
-    height: 95px;
+    height: 115%;
     position: absolute;
     left: 0;
     top: 0;
@@ -203,4 +203,25 @@
 
 .instr:last-child p::before {
   content: unset;
+}
+
+
+@media screen and (max-width: 950px) {
+  .tableContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .tableContainer .left {
+    border: none;
+  }
+
+  .bottomTableContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .leftCont {
+    grid-template-columns: 1fr;
+  }
 }

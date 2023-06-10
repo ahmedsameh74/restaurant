@@ -157,3 +157,29 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width: 950px) {
+  .gallery {
+    flex-direction: column;
+  }
+
+  .background {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    gap: 20px;
+  }
+
+  .upper, .lower {
+    grid-template-columns: 1fr;
+  }
+
+  .content, .contentl {
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+}

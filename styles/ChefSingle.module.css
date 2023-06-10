@@ -89,3 +89,26 @@
     width: 100%;
     gap: 20px;
 }
+
+@media screen and (max-width: 950px) {
+    .chef {
+        flex-direction: column;
+    }
+
+    .chef .right .center {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom {
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+
+    .bottom .icons {
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}

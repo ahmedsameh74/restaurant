@@ -30,3 +30,30 @@
     background: black;
     position: absolute;
 }
+
+
+@media screen and (max-width: 950px) {
+    .chefExperience {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .bars {
+        width: 100%;
+    }
+
+    .bar {
+        width: 100%;
+    }
+
+    .left a {
+        width: 60% !important;
+    }
+}

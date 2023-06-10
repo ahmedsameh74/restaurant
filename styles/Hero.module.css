@@ -111,7 +111,7 @@
     height: 600px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
     .hero {
         flex-direction: column;
         padding: 2.5rem;

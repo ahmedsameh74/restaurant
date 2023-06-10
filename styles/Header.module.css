@@ -154,7 +154,22 @@
     font-size: 25px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
+    .top {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .top img {
+        width: 100%;
+    }
+
+    .top button {
+        /* width: 80% !important; */
+        font-size: 17px !important;
+    }
+}
+
+@media screen and (max-width: 950px) {
     .top {
         flex-direction: column;
         gap: 20px;

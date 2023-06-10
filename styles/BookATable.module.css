@@ -88,3 +88,43 @@
     font-size: 30px !important;
     color: var(--gold) !important;
 }
+
+
+@media screen and (max-width: 950px) {
+    .reserev {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .left button {
+        width: 80% !important;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .form {
+        align-items: center;
+    }
+
+    .right img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .details {
+        flex-direction: column-reverse;
+    }
+
+    .details .right img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .icons {
+        grid-template-columns: 1fr;
+    }
+}

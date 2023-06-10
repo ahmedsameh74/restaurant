@@ -68,16 +68,10 @@ const index = () => {
                       <motion.div
                         className={styles.progress}
                         initial={{
-                          //   opacity: 0,
-                          //  scale: 0.5,
                           width: "0",
-                          // translateX: 0
                         }}
                         whileInView={{
-                          //   opacity: 1,
-                          //  scale: 1,
                           width: item.to,
-                          // translateX: '80%'
                         }}
                         transition={{
                           duration: 0.8,

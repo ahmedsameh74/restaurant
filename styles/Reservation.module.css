@@ -82,7 +82,6 @@
 
 .formGroub input {
     width: 100%;
-    /* height: 60px; */
     background: unset;
     border: 1px solid var(--light);
     padding: 25px 10px;
@@ -128,12 +127,8 @@
 }
 
 .success {
-    /* backdrop-filter: blur(5px);
-    background: #292e36f2;
-    padding: 200px 160px; */
     display: flex;
     flex-direction: column;
-    /* gap: 30px; */
     align-items: center;
     justify-content: center;
 }
@@ -147,7 +142,7 @@
     font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
     .reservation {
         padding: 4.5rem 1.5rem;
     }
