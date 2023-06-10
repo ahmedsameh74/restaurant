@@ -18,23 +18,30 @@ const variants = {
     //  y: 0,
     //   scaleY: 1,
     height: "auto",
+    // translateY: 0
   },
   closed: {
     opacity: 0,
     //  scaleY: 0,
     //  y: 0,
+    overflow: 'hidden',
     height: 0,
+    // translateY: '-50px'
   },
 };
 
-const variantsp = {
-    open: {
-        opacity: 1
-    },
-    closed: {
-        opacity: 0
-    }
-}
+// const variantsp = {
+//     open: {
+//         opacity: 1,
+//         // height: 'auto'
+//         // display: 'block'
+//     },
+//     closed: {
+//         opacity: 0,
+//         // height: 0
+//         // display: 'none'
+//     }
+// }
 const variantsi = {
   open: {
     rotate: "180deg",
@@ -45,8 +52,16 @@ const variantsi = {
 };
 
 const Index = () => {
-    const [active, setActive] = useState({open: false, index: null});
+    const [active, setActive] = useState(null);
     // console.log(Comp())
+
+    const toggle = (i) => {
+        if(active === i) {
+            return setActive(null)
+        }
+        setActive(i)
+
+    }
 
   return (
     <>
@@ -72,13 +87,13 @@ const Index = () => {
                   <div
                     className={styles.question}
                     key={i}
-                    onClick={() => setActive({ open: !active.open, index: i })}
+                    onClick={() => toggle(i)}
                   >
                     <div className={styles.questionHead}>
                       <p>How long is this course in live?</p>
                       <motion.div
                         animate={
-                          active.open && active.index === i ? "open" : "closed"
+                          active === i ? "open" : "closed"
                         }
                         variants={variantsi}
                         initial="closed"
@@ -90,26 +105,26 @@ const Index = () => {
                     </div>
                     <motion.div
                       animate={
-                        active.open && active.index === i ? "open" : "closed"
+                         active === i ? "open" : "closed"
                       }
                       variants={variants}
                       initial="closed"
                       exit="collapsed"
                       className={styles.answer}
                     >
-                      <motion.p
-                        animate={
-                          active.open && active.index === i ? "open" : "closed"
-                        }
-                        variants={variantsp}
-                        initial="closed"
-                        exit="collapsed"
-                        transition={{ duration: 0.3 }}
+                      <p
+                        // animate={
+                        //    active === i ? "open" : "closed"
+                        // }
+                        // variants={variantsp}
+                        // initial="closed"
+                        // exit="collapsed"
+                        // transition={{ duration: 0.3 }}
                       >
                         {
                           "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators."
                         }
-                      </motion.p>
+                      </p>
                     </motion.div>
                   </div>
                 );
