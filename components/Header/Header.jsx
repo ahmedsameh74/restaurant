@@ -38,7 +38,7 @@ const Header = () => {
     {name: 'Our Menu', path: '/our-menu', id: 3, isActive: false},
     {name: 'Pages', path: '/', id: 4, isActive: false},
     {name: 'Blog', path: '/blogs', id: 5, isActive: false},
-    {name: 'Contact Us', path: '/contact', id: 6, isActive: false}
+    {name: 'Contact Us', path: '/contact-us', id: 6, isActive: false}
   ]
 
   const nestedNavItems = [

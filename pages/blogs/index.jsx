@@ -3,6 +3,7 @@ import PageHead from '../../components/PageHead/PageHead'
 import Head from 'next/head'
 import { BlogCard } from '../../components/BlogSection/BlogSection'
 import SubHead from '../../components/SubHead/SubHead'
+import Reservation from '../../components/Reservation/Reservation'
 
 
 const index = () => {
@@ -22,7 +23,9 @@ const index = () => {
             color={"black"}
             title={"Blog"}
             subTitle={"Be First Who Read News"}
-            desc={'Explore the latest stories about our dishes, offers, events and future plans here.'}
+            desc={
+              "Explore the latest stories about our dishes, offers, events and future plans here."
+            }
           />
           <div className={styles.blogs}>
             {Array.from("yass").map((item, index) => {
@@ -30,6 +33,7 @@ const index = () => {
             })}
           </div>
         </div>
+        <Reservation className="reserv" />
       </div>
     </>
   );
