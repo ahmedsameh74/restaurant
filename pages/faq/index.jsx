@@ -7,41 +7,20 @@ import arrow from '../../assets/icons/down-arrow-b.svg'
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-const Comp = () => {
-    const [active, setActive] = useState(false);
-    return {active, setActive}
-}
 
 const variants = {
   open: {
     opacity: 1,
-    //  y: 0,
-    //   scaleY: 1,
     height: "auto",
-    // translateY: 0
   },
   closed: {
     opacity: 0,
-    //  scaleY: 0,
-    //  y: 0,
     overflow: 'hidden',
     height: 0,
-    // translateY: '-50px'
   },
 };
 
-// const variantsp = {
-//     open: {
-//         opacity: 1,
-//         // height: 'auto'
-//         // display: 'block'
-//     },
-//     closed: {
-//         opacity: 0,
-//         // height: 0
-//         // display: 'none'
-//     }
-// }
+
 const variantsi = {
   open: {
     rotate: "180deg",
@@ -53,7 +32,6 @@ const variantsi = {
 
 const Index = () => {
     const [active, setActive] = useState(null);
-    // console.log(Comp())
 
     const toggle = (i) => {
         if(active === i) {
@@ -113,13 +91,6 @@ const Index = () => {
                       className={styles.answer}
                     >
                       <p
-                        // animate={
-                        //    active === i ? "open" : "closed"
-                        // }
-                        // variants={variantsp}
-                        // initial="closed"
-                        // exit="collapsed"
-                        // transition={{ duration: 0.3 }}
                       >
                         {
                           "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators."
