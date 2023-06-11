@@ -45,7 +45,7 @@ const Hero = ({ head, title, body, signature, button, animition, background }) =
             head ? styles.anotherStyleForImgWrapper : styles.imgWrapper
           }
         >
-          <Image src={photo} alt="photo" />
+          <Image src={photo} alt="photo" loading='eager' />
         </div>
         <motion.div
           animate={{ rotate: 180 }}
@@ -55,6 +55,7 @@ const Hero = ({ head, title, body, signature, button, animition, background }) =
           <Image
             src={animition === "default" ? setting : settingGold}
             alt="photo"
+            loading='eager'
           />
         </motion.div>
       </div>
