@@ -233,7 +233,7 @@
     font-size: 30px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
     .top {
         flex-direction: column;
     }

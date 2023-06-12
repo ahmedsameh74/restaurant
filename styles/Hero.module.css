@@ -109,7 +109,7 @@
     object-fit: cover;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1250px) {
     .hero {
         flex-direction: column;
         padding: 2.5rem;
@@ -157,5 +157,8 @@
     border-color: var(--gray);
     border-style: solid solid none;
     width: 100%;
+}
+.right {
+    width: 70%;
 }
 }

@@ -157,7 +157,7 @@
     object-fit: cover;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1250px) {
   .gallery {
     flex-direction: column;
   }

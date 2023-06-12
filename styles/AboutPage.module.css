@@ -165,7 +165,7 @@
     gap: 20px;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1250px) {
     .banner {
         flex-direction: column;
         height: unset;

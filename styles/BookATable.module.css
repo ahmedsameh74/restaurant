@@ -88,7 +88,7 @@
 }
 
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1250px) {
     .reserev {
         flex-direction: column;
         gap: 20px;

@@ -202,7 +202,7 @@
 }
 
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1250px) {
   .tableContainer {
     grid-template-columns: 1fr;
   }
