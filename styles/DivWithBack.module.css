@@ -1,9 +1,10 @@
 .DivWithBack {
-    background: url('../assets/background.jpg') no-repeat fixed;
+    background: url('../assets/background.jpg');
     height: 600px;
+        background-position: 50% 50%;
     background-size: cover;
-    -webkit-background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 @media screen and (max-width: 768px) {

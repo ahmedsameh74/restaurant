@@ -162,3 +162,9 @@
     width: 70%;
 }
 }
+
+@media screen and (max-width: 650px) {
+    .right {
+        width: 100%;
+    }
+}
