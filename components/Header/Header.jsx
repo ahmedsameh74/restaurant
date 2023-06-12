@@ -106,7 +106,7 @@ const Header = () => {
       transition={{ duration: 0.3 }}
     >
       <div className={styles.top}>
-        <button className="secondary-btn">Call - 123 456 789</button>
+        <button className="secondary-btn" style={{color: 'white'}}>Call - 123 456 789</button>
         <Image src={Logo} alt="logo" loading='eager'/>
 
         <Link href={"/book-a-table"}>
