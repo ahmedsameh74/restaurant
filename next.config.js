@@ -6,12 +6,13 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 module.exports = withBundleAnalyzer({
   env: {
     NEXT_PUBLIC_ENV: "PRODUCTION",
+    reactStrictMode: true,
+    swcMinify: true,
   },
 });
 
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+// const nextConfig = {
+  
+// }
 
-module.exports = nextConfig
+// module.exports = nextConfig

@@ -90,6 +90,7 @@
     vertical-align: middle;
     display: inline-block;
     height: 600px;
+    object-fit: cover;
 }
 
 .anotherStyleForImgWrapper {
@@ -105,6 +106,7 @@
     vertical-align: middle;
     display: inline-block;
     height: 600px;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 950px) {

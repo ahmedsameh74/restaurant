@@ -28,20 +28,38 @@ const variants = {
 
 const Header = () => {
   const navItems = [
-    { name: "Home", path: "/", id: 1, isActive: true },
-    { name: "About Us", path: "/about", id: 2, isActive: false },
-    { name: "Our Menu", path: "/our-menu", id: 3, isActive: false },
-    { name: "Pages", path: "/", id: 4, isActive: false },
-    { name: "Blog", path: "/blogs", id: 5, isActive: false },
-    { name: "Contact Us", path: "/contact-us", id: 6, isActive: false },
+    { name: "Home", path: "/", id: 1, isActive: true, prefetch: true },
+    {
+      name: "About Us",
+      path: "/about",
+      id: 2,
+      isActive: false,
+      prefetch: false,
+    },
+    {
+      name: "Our Menu",
+      path: "/our-menu",
+      id: 3,
+      isActive: false,
+      prefetch: false,
+    },
+    { name: "Pages", path: "/", id: 4, isActive: false, prefetch: false },
+    { name: "Blog", path: "/blogs", id: 5, isActive: false, prefetch: false },
+    {
+      name: "Contact Us",
+      path: "/contact-us",
+      id: 6,
+      isActive: false,
+      prefetch: false,
+    },
   ];
 
   const nestedNavItems = [
-    {name: 'Book a table', id: 1, path: '/book-a-table'},
-    {name: 'Our Chefs', id: 2, path: '/our-chefs'},
-    {name: 'Gallery', id: 5, path: '/gallery'},
-    {name: 'FAQ', id: 7, path: '/faq'}
-  ]
+    { name: "Book a table", id: 1, path: "/book-a-table", prefetch: false },
+    { name: "Our Chefs", id: 2, path: "/our-chefs", prefetch: false },
+    { name: "Gallery", id: 5, path: "/gallery", prefetch: false },
+    { name: "FAQ", id: 7, path: "/faq", prefetch: false },
+  ];
 
   const [active, setActive] = useState(false)
   const [menu, setMenu] = useState(false)
@@ -89,7 +107,7 @@ const Header = () => {
     >
       <div className={styles.top}>
         <button className="secondary-btn">Call - 123 456 789</button>
-        <Image src={Logo} alt="logo" />
+        <Image src={Logo} alt="logo" loading='eager'/>
 
         <Link href={"/book-a-table"}>
           <button className="main-btn">Reservation</button>
@@ -111,7 +129,7 @@ const Header = () => {
                   <div>
                     {nestedNavItems.map((item) => {
                       return (
-                        <Link key={item.id} href={item.path} legacyBehavior>
+                        <Link key={item.id} href={item.path} legacyBehavior prefetch={item.prefetch}>
                           <a
                             className={
                               router.pathname.includes(item.path) && styles.activee
@@ -131,6 +149,7 @@ const Header = () => {
                   key={item.id}
                   href={item.path}
                   legacyBehavior
+                  prefetch={item.prefetch}
                 >
                   <a
                   className={router.pathname === item.path && styles.activee}
@@ -196,7 +215,7 @@ const Header = () => {
                 <div style={{ display: menu ? "flex" : "none" }}>
                   {nestedNavItems.map((item) => {
                     return (
-                      <Link key={item.id} href={item.path} legacyBehavior>
+                      <Link key={item.id} href={item.path} legacyBehavior prefetch={item.prefetch}>
                         <a>{item.name}</a>
                       </Link>
                     );
@@ -206,7 +225,7 @@ const Header = () => {
             );
           } else {
             return (
-              <Link key={item.id} href={item.path} legacyBehavior>
+              <Link key={item.id} href={item.path} legacyBehavior prefetch={item.prefetch}>
                 <a>{item.name}</a>
               </Link>
             );
