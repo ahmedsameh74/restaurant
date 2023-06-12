@@ -3,6 +3,11 @@
     position: relative;
 }
 
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
 .mobMenu {
     position: absolute;
     top: 100%;
