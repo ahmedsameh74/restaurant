@@ -144,7 +144,21 @@ a.title:hover {
 }
 @media screen and (max-width: 650px) {
     .blogContent h1 {
-        font-size: 30px;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .blogContent {
+        padding: 100px 20px;
+    }
+
+    .desc {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .img img {
+        height: 300px;
     }
     .content blockquote {
         font-size: 20px;
@@ -152,6 +166,7 @@ a.title:hover {
 
     .content {
         font-size: 15px;
+        padding: 0;
     }
 
     .content h6 {
