@@ -1,5 +1,5 @@
 import styles from '../../styles/Footer.module.css'
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/logol.svg";
 import {
   BsFacebook,
   BsTwitter,
@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.top}>
-        <p>#RestName</p>
+        <p>#CookAndBake</p>
         <Image src={Logo} alt="logo" />
 
         <div className={styles.icons}>

@@ -1,5 +1,5 @@
 import styles from '../../styles/Header.module.css'
-import Logo from '../../assets/logo.svg'
+import Logo from '../../assets/logol.svg'
 import ArrowDown from '../../assets/icons/down-arrow.svg'
 import { AiOutlineMenu } from "react-icons/ai";
 import {GrClose} from 'react-icons/gr';
