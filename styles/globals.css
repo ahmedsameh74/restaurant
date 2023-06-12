@@ -17,20 +17,6 @@ body {
   font-family: var(--font-family);
 }
 
-/* body:after{
-      content:"";
-      position:fixed;
-      top:0;
-      height:100vh; 
-      left:0;
-      right:0;
-      z-index:-1; 
-       background: url('../assets/background.jpg') center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-} */
 
 a {
   text-decoration: none;
