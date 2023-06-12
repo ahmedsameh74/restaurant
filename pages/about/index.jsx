@@ -8,6 +8,9 @@ import healtheShake from "../../assets/icons/healthy-shakes.svg";
 import dinner from "../../assets/icons/pot-dinner.svg";
 import vegan from "../../assets/icons/vegan.svg";
 import chef from "../../assets/chef.jpg";
+import food from "../../assets/foods.jpg";
+import foood from "../../assets/foood.jpg";
+import fooood from "../../assets/fooood.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import SubHead from "../../components/SubHead/SubHead";
@@ -152,15 +155,15 @@ const about = () => {
           />
           <div className={styles.galleryWrapper}>
             <div className={styles.leftCol}>
-              <Image src={chef} alt="gallery" />
-              <Image src={chef} alt="gallery" />
+              <Image src={food} alt="gallery" />
+              <Image src={foood} alt="gallery" />
             </div>
             <div className={styles.centerCol}>
-              <Image src={chef} alt="gallery" />
+              <Image src={fooood} alt="gallery" />
             </div>
             <div className={styles.rightCol}>
-              <Image src={chef} alt="gallery" />
-              <Image src={chef} alt="gallery" />
+              <Image src={foood} alt="gallery" />
+              <Image src={food} alt="gallery" />
             </div>
           </div>
         </div>

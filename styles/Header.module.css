@@ -23,6 +23,9 @@
 .mobMenu a {
     color: white;
 }
+.mobMenu a:hover {
+    color: var(--gold);
+}
 
 .mobMenu p {
     color: white;

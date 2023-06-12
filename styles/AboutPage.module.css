@@ -157,6 +157,7 @@
     width: 100%;
     height: 100%;
     aspect-ratio: 1 !important;
+    object-fit: cover;
 }
 
 .leftCol, .rightCol {
@@ -190,7 +191,7 @@
     }
 
     .galleryWrapper {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     grid-template-rows: 1fr;
     gap: 20px;
 }
@@ -211,5 +212,15 @@
     }
     .chefs {
         grid-template-columns: 1fr !important;
+    }
+
+    .galleryWrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    .leftCol, .rightCol {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 }
