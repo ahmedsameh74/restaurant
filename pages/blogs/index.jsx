@@ -4,9 +4,11 @@ import Head from 'next/head'
 import { BlogCard } from '../../components/BlogSection/BlogSection'
 import SubHead from '../../components/SubHead/SubHead'
 import Reservation from '../../components/Reservation/Reservation'
+import {blogs} from '../../db/blogs'
 
 
 const index = () => {
+  console.log(blogs)
   return (
     <>
       <Head>
@@ -28,8 +30,8 @@ const index = () => {
             }
           />
           <div className={styles.blogs}>
-            {Array.from("yass").map((item, index) => {
-              return <BlogCard key={index} />;
+            {blogs.map((item, index) => {
+              return <BlogCard key={item.id} title={item.title} img={item.img} date={item.date} desc={item.desc} cat={item.cat} href={item.id}/>;
             })}
           </div>
         </div>

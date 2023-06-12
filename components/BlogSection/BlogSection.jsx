@@ -1,28 +1,27 @@
 import Layout from "../Layout/Layout";
 import SubHead from "../SubHead/SubHead";
-import foods from "../../assets/foood.jpg";
 import Image from "next/image";
 import styles from "../../styles/BlogSection.module.css";
+import Link from "next/link";
+import { blogs } from "../../db/blogs";
 
-export const BlogCard = () => {
+export const BlogCard = ({title, desc, img, cat, date, href}) => {
   return (
       <div className={styles.card}>
               <div className={styles.cardImg}>
-                <Image src={foods} alt="foods" />
+                <Image src={img} alt="foods" />
                 <div className={styles.btnOverlay}>
-                    <button className="secondary-btn">View More</button>
+                    <Link href={`/blog/${href}`} className="secondary-btn">View More</Link>
                 </div>
               </div>
               <div className={styles.cardDesc}>
                 <div className={styles.cardInfo}>
-                  <p className={styles.cardTitle}>DELICIOUS</p>
-                  <p className={styles.cardTitle}>MARCH 19, 2022</p>
+                  <Link href={`/category/${cat}`} className={styles.cardTitle}>{cat}</Link>
+                  <p className={styles.cardTitle}>{date}</p>
                 </div>
-                <h3>The Legend Of US Cuisine: The Story Of Hungry People</h3>
+                <h3>{title}</h3>
                 <p className={styles.cardPara}>
-                  Capitalize on low-hanging fruit to identify a ballpark value
-                  added matrix economically and the creative activity to beta
-                  test override the food quality.
+                  {desc}
                 </p>
               </div>
             </div>
@@ -43,8 +42,18 @@ const BlogSection = () => {
         width={"70%"}
       />
       <div className={styles.bottom}>
-        {Array.from("Ya").map((item, index) => {
-          return <BlogCard key={index} />;
+        {blogs.splice(0, 2).map((item, index) => {
+          return (
+            <BlogCard
+              key={item.id}
+              title={item.title}
+              img={item.img}
+              date={item.date}
+              desc={item.desc}
+              cat={item.cat}
+              href={item.id}
+            />
+          );
         })}
       </div>
     </Layout>

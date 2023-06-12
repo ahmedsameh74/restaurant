@@ -13,6 +13,26 @@
     gap: 20px;
 }
 
+.cat {
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+span.catSpan {
+    text-transform: lowercase;
+}
+
+span.catSpan {
+    text-transform: capitalize;
+    color: var(--gold);
+    margin-left: 4px;
+}
+
 @media screen and (max-width: 1250px) {
     .blogs {
         grid-template-columns: 1fr;

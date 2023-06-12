@@ -66,8 +66,15 @@
     cursor: pointer;
 }
 
+.cardTitle:nth-child(1) {
+    color: black;
+    text-transform: uppercase;
+}
 .cardTitle:nth-child(1):hover {
-    color: var(--gold);
+    color: var(--gold) !important;
+}
+.cardTitle:nth-child(1):visited {
+    color: unset;
 }
 
 .cardTitle::after, .cardTitle::before {
